@@ -1,0 +1,184 @@
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.AssemblyReference.cache
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\Styles.baml
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\ErrorBox.g.cs
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\S7Comm.g.cs
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\TCP.g.cs
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意_MarkupCompile.cache
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意_MarkupCompile.lref
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\UserControl.baml
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.exe
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.deps.json
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.runtimeconfig.json
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.pdb
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Abbyy.CloudSdk.V2.Client.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\HslCommunication.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\S7.Net.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\System.IO.Ports.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.xml
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\ErrorBox.baml
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\S7Comm.baml
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\TCP.baml
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.g.resources
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.AssemblyInfoInputs.cache
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.AssemblyInfo.cs
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.CoreCompileInputs.cache
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.Up2Date
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\refint\小玩意.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.pdb
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.genruntimeconfig.cache
+C:\Users\Think book\source\repos\小玩意\小玩意\obj\Debug\net8.0-windows\ref\小玩意.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Think book\source\repos\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.exe
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.deps.json
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.runtimeconfig.json
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.pdb
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Abbyy.CloudSdk.V2.Client.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\HslCommunication.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\S7.Net.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\System.IO.Ports.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.xml
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.AssemblyReference.cache
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\Styles.baml
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\UserControl.baml
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ErrorBox.g.cs
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\S7Comm.g.cs
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\TCP.g.cs
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意_MarkupCompile.cache
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意_MarkupCompile.lref
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ErrorBox.baml
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\S7Comm.baml
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\TCP.baml
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.g.resources
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.AssemblyInfoInputs.cache
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.AssemblyInfo.cs
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.CoreCompileInputs.cache
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.Up2Date
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\refint\小玩意.dll
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.pdb
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.genruntimeconfig.cache
+C:\Users\25062\Desktop\GitProgramFile\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ref\小玩意.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.exe
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.deps.json
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.runtimeconfig.json
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\小玩意.pdb
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Abbyy.CloudSdk.V2.Client.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\HslCommunication.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\S7.Net.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\System.IO.Ports.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.xml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.AssemblyReference.cache
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\Styles.baml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\UserControl.baml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ErrorBox.g.cs
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\TCP.g.cs
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意_MarkupCompile.cache
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意_MarkupCompile.lref
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ErrorBox.baml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\TCP.baml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.g.resources
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.AssemblyInfoInputs.cache
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.AssemblyInfo.cs
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.CoreCompileInputs.cache
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.sourcelink.json
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.csproj.Up2Date
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\refint\小玩意.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.pdb
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\小玩意.genruntimeconfig.cache
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ref\小玩意.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\WpfAnimatedGif.dll
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ConnectDevice.g.cs
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\ConnectDevice.baml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\S7Communication.g.cs
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\S7Communication.baml

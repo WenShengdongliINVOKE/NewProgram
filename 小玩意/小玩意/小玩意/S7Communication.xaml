@@ -1,0 +1,145 @@
+﻿<Page x:Class="小玩意.S7Communication"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:小玩意"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="S7Communication">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Page.Resources>
+
+
+    <Grid Background="AliceBlue">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <DataGrid Grid.Column="1"  x:Name="DataGridText"  Style="{Binding DataGridColumnHeader}" Height="Auto"    Margin="10,3,3,15" AlternationCount="2" 
+                  AutoGenerateColumns="False" BorderBrush="{x:Null}" Foreground="Red" 
+                  HeadersVisibility="Column" HorizontalScrollBarVisibility="Hidden"
+                  VerticalScrollBarVisibility="Auto" GridLinesVisibility="None"
+                  CanUserAddRows="False" ItemsSource="{Binding MyData}" 
+                  SelectedItem="{Binding SelectedSide, Mode=TwoWay}"
+                  Background="White"  FontSize="18"  SelectedCellsChanged ="DataGridText_SelectedCellsChanged" >
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn  Header="地址" Width="1*"  >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="100" >
+                                <Label  Content="{Binding S7Address }"  Margin="20,10,0,10"></Label>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn  Header="机架号" Width="1*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Label  Content="{Binding S7Lock }" Margin="20,10,0,10"></Label>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  Header="Slot" Width="1*"  >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Label  Content="{Binding S7Slot}" Margin="20,10,0,10"></Label>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="操作" Width="1*"  >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button Content="连接" FontSize="20" Style="{StaticResource ModernButtonStyle1}" Width=" 130" Height="30"  Tag="{Binding ID}" Command="{Binding }" Margin="0,2,0,0">
+
+                                </Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Column="0">
+            <Label Content="已读取的数据"  />
+
+            <RichTextBox  x:Name="ReadData" >
+                <FlowDocument>
+                    <Paragraph>
+                        This is flow content and you can
+                        <Bold>edit me!</Bold>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </StackPanel>
+        <DataGrid Grid.Column="0"  x:Name="DataGridText1"  Style="{Binding DataGridColumnHeader}" Height="Auto"    Margin="1,100,3,15" AlternationCount="2" 
+            AutoGenerateColumns="False" BorderBrush="{x:Null}" Foreground="Red" 
+            HeadersVisibility="Column" HorizontalScrollBarVisibility="Hidden"
+            VerticalScrollBarVisibility="Auto" GridLinesVisibility="None"
+            CanUserAddRows="False" ItemsSource="{Binding MyDataValue}" 
+            SelectedItem="{Binding SelectedSide11}"
+            Background="White"  FontSize="18"  SelectionUnit="Cell"   >
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn  Header="变量名称" Width="1*"  >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="100" >
+                                <Label  Content="{Binding Name }"  Margin="20,10,0,10"></Label>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn  Header="地址" Width="1*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Label  Content="{Binding Address }" Margin="20,10,0,10"></Label>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn  Header="当前值" Width="1*"  >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Label  Content="{Binding Value}" Margin="20,10,0,10"></Label>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="操作" Width="1*"  >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button Content="写入" FontSize="20" Style="{StaticResource ModernButtonStyle1}" Width=" 130" Height="30"  Tag="{Binding ID}" Command="{Binding }" Margin="0,2,0,0">
+
+                                </Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>
