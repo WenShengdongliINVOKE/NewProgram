@@ -13,18 +13,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ABBControllers" Version="1.0.0" />
-    <PackageReference Include="Abbyy.CloudSdk.V2.Client" Version="1.0.6" />
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
     <PackageReference Include="EPPlus" Version="7.7.0" />
     <PackageReference Include="HslCommunication" Version="12.1.3" />
+    <PackageReference Include="NPOI" Version="2.7.4" />
     <PackageReference Include="S7netplus" Version="0.20.0" />
     <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="DLL\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="ABB.Robotics.Controllers.PC">
-      <HintPath>bin\Debug\ABB.Robotics.Controllers.PC.dll</HintPath>
+      <HintPath>bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="RobotStudio.Services.RobApi">
+      <HintPath>bin\Debug\net8.0-windows\RobotStudio.Services.RobApi.dll</HintPath>
+    </Reference>
+    <Reference Include="RobotStudio.Services.RobApi.Desktop">
+      <HintPath>bin\Debug\net8.0-windows\RobotStudio.Services.RobApi.Desktop.dll</HintPath>
     </Reference>
   </ItemGroup>
 

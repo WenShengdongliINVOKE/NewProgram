@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AbbRobot.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ConnectDevice.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

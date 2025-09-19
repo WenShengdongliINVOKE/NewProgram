@@ -33,9 +33,10 @@
                 <TextBlock Text="界面导航" FontSize="20" FontWeight="Bold" VerticalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal" Margin="20 0 0 0">
                     <Button x:Name="ConnectDevice" Content="连接设备" Width="100" Height="40" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" CommandParameter="ConnectDevice"  Click="NavigateToPage"/>
-                    <Button x:Name="S7Communication" Content="读取信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}"  CommandParameter="S7Communication"  Click="NavigateToPage"/>
-                    <Button x:Name="AboutBtn" Content="生产详情" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}"  Click="NavigateToPage"/>
-                    <Button x:Name="ContactBtn" Content="配方资料" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" Click="NavigateToPage"/>
+                    <Button x:Name="S7Communication" Content="PLC信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}"  CommandParameter="S7Communication"  Click="NavigateToPage"/>
+                    <Button x:Name="AboutBtn" Content="机器人信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" CommandParameter = "AbbRobot"  Click="NavigateToPage"/>
+                    <Button x:Name="ContactBtn" Content="轴信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" Click="NavigateToPage"/>
+                    <Button x:Name="ccc" Content="加工中心信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" Click="NavigateToPage" />
                 </StackPanel>
             </StackPanel>
         </Border>

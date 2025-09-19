@@ -3,6 +3,9 @@ using 小玩意.ViewModel;
 
 namespace 小玩意.Comm
 {
+    /// <summary>
+    /// ModbusRTU通讯类
+    /// </summary>
     internal class ModbusComm : IDisposable
     {
        
@@ -328,9 +331,13 @@ namespace 小玩意.Comm
             return bytes;
         }
 
-   
 
-        private bool WriteStringData( string Message)
+        /// <summary>
+        /// 向串口写入字符串数据
+        /// </summary>
+        /// <param name="Message"></param>
+        /// <returns></returns>
+        public bool WriteStringData( string Message)
         {
             if (SerialPort.IsOpen)
             {

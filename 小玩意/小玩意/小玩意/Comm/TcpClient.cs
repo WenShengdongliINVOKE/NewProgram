@@ -1,5 +1,6 @@
 ﻿using System.Net.Sockets;
 using System.Text;
+using 小玩意.ViewModel;
 
 namespace 小玩意.Comm
 {
@@ -8,7 +9,9 @@ namespace 小玩意.Comm
         private readonly System.Net.Sockets.TcpClient _client = new();
         private NetworkStream? _stream;
         private bool _isConnected;
-
+        /// <summary>
+        /// 使用时 请在外面 MessageReceived += 你的方法 ; 通过对委托的封装来让订阅者可以接受到发布者所发送的消息
+        /// </summary>
         public event Action<string>? MessageReceived;
         public event Action? Disconnected;
         /// <summary>
@@ -26,7 +29,7 @@ namespace 小玩意.Comm
 
             if (await Task.WhenAny(connectTask, timeoutTask) == timeoutTask)
             {
-                throw new TimeoutException("Connection timed out");
+               ErrorViewModel.Errornotice("连接超时，请检查服务器地址和端口是否正确。", true, 1);
             }
 
             _stream = _client.GetStream();
@@ -34,7 +37,7 @@ namespace 小玩意.Comm
             _ = ReceiveMessagesAsync();
         }
         /// <summary>
-        /// 
+        /// 读取数据
         /// </summary>
         /// <returns></returns>
         private async Task ReceiveMessagesAsync()
@@ -61,11 +64,12 @@ namespace 小玩意.Comm
             }
             catch
             {
+                //TODO: Add logging 加日志和异常处理
                 // Handle read errors
             }
             finally
             {
-                Disconnect();
+                //Disconnect();
             }
         }
         /// <summary>
@@ -79,6 +83,7 @@ namespace 小玩意.Comm
 
             var data = Encoding.UTF8.GetBytes($"{message}\n");
             await _stream!.WriteAsync(data, 0, data.Length);
+            //TODO :加日志 加异常
         }
         /// <summary>
         /// 

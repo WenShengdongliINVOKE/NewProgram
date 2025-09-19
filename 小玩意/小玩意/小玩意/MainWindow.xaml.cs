@@ -37,8 +37,15 @@ namespace 小玩意
         private void NavigateToPage(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            string pageName = $"{button.CommandParameter.ToString()}.xaml";
-            NavigateToPage(pageName, button);
+            if (button.CommandParameter !=null)
+            {
+                string pageName = $"{button.CommandParameter.ToString()}.xaml";
+                NavigateToPage(pageName, button);
+            }
+            else
+            {
+                ErrorViewModel.Errornotice("不存在的导航页面！", true, 1);
+            }
         }
         /// <summary>
         /// 

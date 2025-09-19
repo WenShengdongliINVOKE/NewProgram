@@ -19,10 +19,14 @@ namespace 小玩意.ViewModel
         public ICommand? tCPcommand { get; set; }
         public ICommand? rS485command { get; set; }
         public ICommand? rs485TCPcommand { get; set; }
+
+        public ICommand? abbcommand { get; set; }
         ErrorViewModel errorViewModel = new ErrorViewModel();
         public ConnectDeviceViweModel()
         {
             s7command = new RelayCommand(S7ConnCommand);
+            abbcommand = new RelayCommand(AbbConnComm);
+            
             (S7Models, _) = InitDevice.GetPlcDevice();
         }
         //[ObservableProperty]
@@ -31,6 +35,14 @@ namespace 小玩意.ViewModel
 
 
 
+
+        private void AbbConnComm()
+        { 
+             
+             AbbRobot model = new AbbRobot();
+
+
+        }
 
         /// <summary>
         /// 与PLC建立通讯

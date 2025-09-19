@@ -5305,15 +5305,15 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidDataFormatException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidDomain.RapidDataFormatException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidDomain.TextHelper.CreateValues(System.String[])">
             <summary>
@@ -5357,8 +5357,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidDomain.RapidModuleNotFoundException">
             <summary>
@@ -5387,15 +5387,15 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidModuleNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidDomain.RapidModuleNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidDomain.RapidRoutineNotFoundException">
             <summary>
@@ -5431,8 +5431,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidRoutineNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.Controllers.RapidDomain.RapidRoutineNotFoundException.Name">
             <summary>
@@ -5444,8 +5444,8 @@
             <summary>
             Gets data for serialization.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidDomain.RapidSymbolNotFoundException">
             <summary>
@@ -5481,8 +5481,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidSymbolNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.Controllers.RapidDomain.RapidSymbolNotFoundException.Name">
             <summary>
@@ -5491,10 +5491,10 @@
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidDomain.RapidSymbolNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidDomain.RapidTaskNotFoundException">
             <summary>
@@ -5530,8 +5530,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidTaskNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.Controllers.RapidDomain.RapidTaskNotFoundException.Name">
             <summary>
@@ -5541,10 +5541,10 @@
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidDomain.RapidTaskNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidDomain.UIInstructionNotActiveException">
             <summary>
@@ -5580,8 +5580,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidTaskNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.Controllers.RapidDomain.UIInstructionNotActiveException.TaskName">
             <summary>
@@ -5591,10 +5591,10 @@
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidDomain.UIInstructionNotActiveException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidDomain.IRapidSymbol">
             <summary>
@@ -6119,7 +6119,7 @@
              <see cref="T:ABB.Robotics.Controllers.RapidDomain.SymbolSearchMethod"/><b>.Scope</b>. See the second example below.
              <para> </para>
              <para><b>NOTE!</b> RAPID data declared in a <b>- Hidden</b> or <b>-Shared -Hidden</b> module cannot be found.</para>
-             </remarks>
+             </remarks>    
              <example>This example lists all functions and RAPID data instances of
              type num declared in task T_ROB1. The name of <see cref="T:ABB.Robotics.Controllers.RapidDomain.RapidSymbol"/> and
              the module where it is declared are added to a listview.
@@ -8330,8 +8330,8 @@
             Creates a ServiceNotSupportedException object.
             Deserialization constructor.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>
+            <param name="context">SEE MSDN.</param>
+            <param name="info">SEE MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.ControllerBufferOverflowException">
             <summary>
@@ -8362,8 +8362,8 @@
             Creates a ControllerBufferOverflowException object.
             Deserialization constructor.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>
+            <param name="context">SEE MSDN.</param>
+            <param name="info">SEE MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.AuthenticationException">
             <summary>
@@ -8393,8 +8393,8 @@
             Creates a AuthenticationException object.
             Deserialization constructor.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>
+            <param name="context">SEE MSDN.</param>
+            <param name="info">SEE MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.SystemDirectoryCorruptException">
             <summary>
@@ -8423,15 +8423,15 @@
             <summary>
             Creates a SystemDirectoryCorruptException.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.SystemDirectoryCorruptException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.Argument.CheckString(System.String)">
             <summary>
@@ -8540,15 +8540,15 @@
             <summary>
             Deserialization constructor.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.BackupException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.BackupManager">
             <summary>
@@ -9550,7 +9550,7 @@
             </summary>
             <param name="x">Value.</param>
             <param name="y">Limit.</param>
-            <returns>See comparer in .NET documentation.</returns>
+            <returns>See comparer in MSDN.</returns>
         </member>
         <member name="M:ABB.Robotics.Controllers.ConfigurationDomain.ValueComparer.CompareObjects(ABB.Robotics.Controllers.ConfigurationDomain.Attribute,System.Object,System.Object)">
             <summary>
@@ -9767,11 +9767,6 @@
             <seealso cref="T:System.DateTimeKind" />
             <seealso cref="P:System.DateTime.UtcNow" />
             </remarks>
-        </member>
-        <member name="P:ABB.Robotics.Controllers.Controller.StartTime">
-            <summary>
-            Gets the system clock at the last startup of the controller.
-            </summary>
         </member>
         <member name="P:ABB.Robotics.Controllers.Controller.TimeServer">
             <summary>
@@ -10104,20 +10099,6 @@
             Creates a file with RobotWare diagnostics information on the controllers file system
             </summary>           
         </member>
-        <member name="M:ABB.Robotics.Controllers.Controller.SendHeartBeat">
-            <summary>
-            Send a heartbeat to the controller to show presence while executing. 
-            </summary>
-            <remarks>
-            Depending on controller version and configuration, a client that holds mastership must send a heartbeat to the controller to show presence during execution.  
-            If the client does not send a heartbeat with a specified interval, execution will stop and the controller will go to motors off.  
-            This functionality is availabe in RobotWare 7.8 and later and is controlled via the configuration instance SYS/MASTER_BOOL/HeartBeat:
-            - If the parameter Select is true, a client that holds mastership must send heartbeats or program execution will stop.
-            - The parameter Timeout corresponds to the maximum heartbeat interval.  
-            
-            This is required for standalone applications, but not for RobotStudio add-ins.
-            </remarks>
-        </member>
         <member name="E:ABB.Robotics.Controllers.Controller.AutoConditionsChanged">
             <summary>
             This event is raised when a controller is moved from manual
@@ -10249,8 +10230,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.FactoryFailedException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.ControllerFactoryProperty">
             <summary>
@@ -10646,15 +10627,15 @@
             <summary>
             Creates a ControllerNotFoundException object.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.Discovery.ControllerNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.Discovery.LocalVCFilter">
             <summary>
@@ -10910,7 +10891,7 @@
             Waits for the specified system to become available.
             </summary>
             <param name="millisecondsTimeout">Timeout for wait operation.</param>
-            <param name="exitContext">See .NET documentation.</param>
+            <param name="exitContext">See MSDN.</param>
             <returns>True if the controller is available otherwise false.</returns>
         </member>
         <member name="M:ABB.Robotics.Controllers.Discovery.SystemStartedEvent.WaitOne(System.TimeSpan,System.Boolean)">
@@ -10918,7 +10899,7 @@
             Waits for the specified system to become available.
             </summary>
             <param name="timeout">Timeout for wait operation.</param>
-            <param name="exitContext">See .NET documentation.</param>
+            <param name="exitContext">See MSDN.</param>
             <returns>True if the controller is available otherwise false.</returns>
         </member>
         <member name="M:ABB.Robotics.Controllers.Discovery.SystemStartedEvent.Dispose(System.Boolean)">
@@ -11846,17 +11827,17 @@
         <member name="M:ABB.Robotics.Controllers.FileSystemDomain.FileSystemException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             Initializes a new FileSystemException object. Only used for
-            deserialization, see .NET documentation.
+            deserialization, see MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.FileSystemDomain.FileSystemException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.FileSystemDomain.FileSystemPath">
             <summary>
@@ -12354,8 +12335,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.GrantDemandRejectedException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.GrantStringComparer">
             <summary>
@@ -13959,10 +13940,6 @@
             <exclude/>
             <summary>Maximum IPC message size (not including header)</summary>
         </member>
-        <member name="P:ABB.Robotics.Controllers.Messaging.Ipc.MaxPackageSize">
-            <exclude/>
-            <summary>Maximum IPC package size (not including header)</summary>
-        </member>
         <member name="F:ABB.Robotics.Controllers.Messaging.Ipc.InvalidNo">
             <summary>Represents an invalid number</summary>
         </member>
@@ -13986,16 +13963,6 @@
             </summary>
         </member>
         <member name="P:ABB.Robotics.Controllers.Messaging.Ipc.GetMaxPackageSize">
-            <summary>
-            Returns the maximum size of an Ipc package.
-            </summary>
-        </member>
-        <member name="M:ABB.Robotics.Controllers.Messaging.Ipc.GetMaximumMessageSize">
-            <summary>
-            Returns the maximum size of an Ipc Message.
-            </summary>
-        </member>
-        <member name="M:ABB.Robotics.Controllers.Messaging.Ipc.GetMaximumPackageSize">
             <summary>
             Returns the maximum size of an Ipc package.
             </summary>
@@ -14109,7 +14076,7 @@
         </member>
         <member name="M:ABB.Robotics.Controllers.Messaging.IpcQueue.#ctor(ControllerAPI.Internal.ControllerInternal,System.String,System.Int32,System.Int32,System.Int32,System.Boolean)">
             <summary>
-            Constructor.
+            Constructor
             </summary>
         </member>
         <member name="M:ABB.Robotics.Controllers.Messaging.IpcQueue.Send(ABB.Robotics.Controllers.Messaging.IpcMessage)">
@@ -14275,7 +14242,7 @@
             <summary>Status</summary>
         </member>
         <member name="P:ABB.Robotics.Controllers.Messaging.IpcMessage.Size">
-            <summary>The size of the message data. This is the same value as Data.Length.</summary>
+            <summary>The size of the message data</summary>
         </member>
         <member name="P:ABB.Robotics.Controllers.Messaging.IpcMessage.Type">
             <summary>
@@ -14294,11 +14261,11 @@
             <summary>
             Creates an Ipc message.
             </summary>
-            <param name="Capacity">The capacity of the message data.</param>
+            <param name="Capacity">The capacity of the message data</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.Messaging.IpcMessage.#ctor">
             <summary>
-            Default constructor - creates an empty message.
+            Default constructor - creates a message with maximum capacity.
             </summary>
         </member>
         <member name="M:ABB.Robotics.Controllers.Messaging.IpcMessage.SetData(System.Byte[])">
@@ -14326,7 +14293,7 @@
         </member>
         <member name="P:ABB.Robotics.Controllers.Messaging.IpcMessage.Data">
             <summary>
-            Returns the data of the message
+            Returns a reference to the data of the message
             </summary>
         </member>
         <member name="T:ABB.Robotics.Controllers.NetworkSettingsInfo">
@@ -14645,11 +14612,6 @@
               Looks up a localized string similar to IAsyncResult not valid..
             </summary>
         </member>
-        <member name="P:ABB.Robotics.Controllers.Properties.Resources.InvalidSearchMethod">
-            <summary>
-              Looks up a localized string similar to The SearchProperties parameter has an invalid SearchMethod value. Value must be Block or Scope..
-            </summary>
-        </member>
         <member name="P:ABB.Robotics.Controllers.Properties.Resources.MalformedUrl">
             <summary>
               Looks up a localized string similar to Provided url is malformed or null..
@@ -14852,8 +14814,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidModuleNotFoundException">
             <summary>
@@ -14882,15 +14844,15 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidModuleNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidModuleNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidRoutineNotFoundException">
             <summary>
@@ -14926,8 +14888,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidRoutineNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.Controllers.RapidRoutineNotFoundException.Name">
             <summary>
@@ -14939,8 +14901,8 @@
             <summary>
             Gets data for serialization.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidSymbolNotFoundException">
             <summary>
@@ -14976,8 +14938,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidSymbolNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.Controllers.RapidSymbolNotFoundException.Name">
             <summary>
@@ -14986,10 +14948,10 @@
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidSymbolNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RapidTaskNotFoundException">
             <summary>
@@ -15025,8 +14987,8 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.RapidTaskNotFoundException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.Controllers.RapidTaskNotFoundException.Name">
             <summary>
@@ -15036,10 +14998,10 @@
         </member>
         <member name="M:ABB.Robotics.Controllers.RapidTaskNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.ReadOnlyObject">
             <summary>
@@ -15286,15 +15248,15 @@
             <summary>
             Initializes a new MasterReject instance.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>    
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>    
         </member>
         <member name="M:ABB.Robotics.Controllers.ResourceHeldException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             Implements ISerializable.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Controllers.RobotWare">
             <summary>
@@ -16562,15 +16524,15 @@
             <summary>
             Initializes a new instance of the <see cref="T:ABB.Robotics.Controllers.VirtualPanelAttachFailedException"/> class.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">SEE MSDN.</param>
+            <param name="context">SEE MSDN.</param>
         </member>
         <member name="M:ABB.Robotics.Controllers.VirtualPanelAttachFailedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.BlockUrl">
             <summary>
@@ -16640,8 +16602,8 @@
             <summary>
             Deserialization constructor.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="P:ABB.Robotics.BaseException.ExtendedErrorInformation">
             <summary>
@@ -16655,8 +16617,8 @@
             <summary>
             Implements ISerializable interface.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.TimeoutException">
             <summary>
@@ -16685,8 +16647,8 @@
             <summary>
             Deserialization constructor.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>   
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>   
         </member>
         <member name="T:ABB.Robotics.ExceptionManager">
             <summary>
@@ -16812,15 +16774,15 @@
             <summary>
             Initializes a new MasterReject instance.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>    
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>    
         </member>
         <member name="M:ABB.Robotics.MasterRejectException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             Implements ISerializable.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.ModeRejectException">
             <summary>
@@ -16851,15 +16813,15 @@
             <summary>
             Initializes a new ModeRejectException instance.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>           
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>           
         </member>
         <member name="M:ABB.Robotics.ModeRejectException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             Implements ISerializable.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.GeneralException">
             <summary>
@@ -16894,8 +16856,8 @@
             <summary>
             Deserialization constructor.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>   
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>   
         </member>
         <member name="P:ABB.Robotics.GeneralException.Message">
             <summary>
@@ -16934,8 +16896,8 @@
             Creates a GenericController Exception object. Deserialization
             constructor.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>                         
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>                         
         </member>
         <member name="T:ABB.Robotics.PCounter">
             <summary>
@@ -17013,19 +16975,20 @@
             <summary>
             Initializes a new SysFailRejectException instance.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>           
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>           
         </member>
         <member name="M:ABB.Robotics.SysFailRejectException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             Implements ISerializable.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.UasRejectException">
             <summary>
-            This exception is thrown if an operation fails when the current user doesn't have the required UAS grant.
+            This exception is thrown if an operation fails when
+            the current user doesn't have the required UAS grant.
             </summary>
         </member>
         <member name="M:ABB.Robotics.UasRejectException.#ctor">
@@ -17050,15 +17013,15 @@
             <summary>
             Initializes a new UasRejectException instance.
             </summary>
-            <param name="context">See .NET documentation.</param>
-            <param name="info">See .NET documentation.</param>    
+            <param name="context">See MSDN.</param>
+            <param name="info">See MSDN.</param>    
         </member>
         <member name="M:ABB.Robotics.UasRejectException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             Implements ISerializable.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ABB.Robotics.Url">
             <summary>
@@ -18486,7 +18449,7 @@
             <param name="reader">Reader to parse.</param>
             <returns>The composite string object.</returns>
         </member>
-        <member name="M:ControllerAPI.Internal.CompositeString.ToString(System.String[])">
+        <member name="M:ControllerAPI.Internal.CompositeString.ToString(System.Object[])">
             <summary>
             Get the string representation of this object.
             </summary>
@@ -19415,6 +19378,12 @@
             </summary>
             <returns>The text.</returns>
         </member>
+        <member name="M:ControllerAPI.Internal.EventLogMessageInternal.GetArguments">
+            <summary>
+            Gets the argument list for this message.
+            </summary>
+            <returns>The argument list.</returns>
+        </member>
         <member name="M:ControllerAPI.Internal.EventLogMessageInternal.GetBody">
             <summary>
             Gets the body of the event log.
@@ -19644,15 +19613,15 @@
             <summary>
             Deserailzation constructor.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="M:ControllerAPI.Internal.FileCacheException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
-            See .NET documentation.
+            See MSDN.
             </summary>
-            <param name="info">See .NET documentation.</param>
-            <param name="context">See .NET documentation.</param>
+            <param name="info">See MSDN.</param>
+            <param name="context">See MSDN.</param>
         </member>
         <member name="T:ControllerAPI.Internal.FileExistsCmd">
             <summary>
@@ -21326,7 +21295,7 @@
             Gets the TypeCode of the attribute.
             </summary>        
         </member>
-        <member name="M:Adapters.ConfigTypeAdapter.InstanceIsReadOnly(System.UInt64)">
+        <member name="M:Adapters.ConfigTypeAdapter.InstanceIsReadOnly(System.UInt32)">
             <summary>
             Flag that signals that the object is readonly or not.
             </summary>
@@ -21340,13 +21309,13 @@
             <param name="name">Name of instance.</param>
             <returns>The new object.</returns>
         </member>
-        <member name="M:Adapters.ConfigTypeAdapter.Delete(System.UInt64)">
+        <member name="M:Adapters.ConfigTypeAdapter.Delete(System.UInt32)">
             <summary>
              Deletes the given object from the database.
             </summary>
             <param name="id">Id of the instance</param>
         </member>
-        <member name="M:Adapters.ConfigTypeAdapter.SetAttributeValue(System.UInt64,System.String,System.Int32,System.Object)">
+        <member name="M:Adapters.ConfigTypeAdapter.SetAttributeValue(System.UInt32,System.String,System.Int32,System.Object)">
             <summary>
             Sets the value of the attribute.
             </summary>
@@ -21355,7 +21324,7 @@
             <param name="index">Index of attribute,1-based.</param>
             <param name="value">New Value of attribute.</param>
         </member>
-        <member name="M:Adapters.ConfigTypeAdapter.GetAttributeValue(System.UInt64,System.String,System.Int32)">
+        <member name="M:Adapters.ConfigTypeAdapter.GetAttributeValue(System.UInt32,System.String,System.Int32)">
             <summary>
              Returns the value of the attribute.
             </summary>
@@ -21441,20 +21410,8 @@
             <param name="path">Path of directory.</param>
             <param name="includes">What to include from backup.</param>
             <param name="ignores">What errors to ignore.</param>
-            <param name="includeControllerSettings">Internal use only, available from RW 6.03.01</param>
-            <param name="includeSafetySettings">Internal use only, available from RW 6.05</param>
-            <returns>True if restore will complete successfully.</returns>
-        </member>
-        <member name="M:Adapters.ControllerAdapter.CheckRestore(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Checks for possible mismatches and other problems with a backup.
-            </summary>
-            <param name="path">Path of directory.</param>
-            <param name="includes">What to include from backup.</param>
-            <param name="ignores">What errors to ignore.</param>
-            <param name="includeControllerSettings">Internal use only, available from RW 6.03.01</param>
-            <param name="includeSafetySettings">Internal use only, available from RW 6.05</param>
-            <param name="includeUasSettings">Internal use only, available from RW 7.15</param>
+            <param name="includeControllerSettings">Internal use only</param>
+            <param name="includeSafetySettings">Internal use only</param>
             <returns>True if restore will complete successfully.</returns>
         </member>
         <member name="M:Adapters.ControllerAdapter.CreateQueue(System.String,System.Int16,System.Int16)">
@@ -21641,25 +21598,8 @@
             <param name="include">Defines what to restore from the backup.</param>
             <param name="ignore">Defines what mismatches between current system and backup to ignore.</param>
             <param name="removeBackup">Flag to indicate if the backup folder shall be removed.</param>
-            <param name="includeControllerSettings">Internal use only, available from RW 6.03.01</param>
-            <param name="includeSafetySettings">Internal use only, available from RW 6.05</param>
-            <remarks>
-            Requires mastership of Rapid and Configuration domains. 
-            Requires UAS_RESTORE grant. 
-            Requires Auto mode.
-            </remarks>
-        </member>
-        <member name="M:Adapters.ControllerAdapter.Restore(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
-            <summary>        
-            Performs a Restore operation of a controller system.
-            </summary>
-            <param name="path">Path to the backup.</param>
-            <param name="include">Defines what to restore from the backup.</param>
-            <param name="ignore">Defines what mismatches between current system and backup to ignore.</param>
-            <param name="removeBackup">Flag to indicate if the backup folder shall be removed.</param>
-            <param name="includeControllerSettings">Internal use only, available from RW 6.03.01</param>
-            <param name="includeSafetySettings">Internal use only, available from RW 6.05</param>
-            <param name="includeUasSettings">Internal use only, available from RW 7.15</param>
+            <param name="includeControllerSettings">Internal use only</param>
+            <param name="includeSafetySettings">Internal use only</param>
             <remarks>
             Requires mastership of Rapid and Configuration domains. 
             Requires UAS_RESTORE grant. 

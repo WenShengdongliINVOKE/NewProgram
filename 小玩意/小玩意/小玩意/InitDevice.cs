@@ -6,6 +6,9 @@ using 小玩意.Model;
 
 namespace 小玩意
 {
+    /// <summary>
+    /// 这个类是加载外部设备信息的 ABB机器人的加载比较特殊，它是通过自己的SDK去扫描环境内的机器人的 所以不在这里加载直接在机器人的通讯类里面加载
+    /// </summary>
     public static class InitDevice
     {
         /// <summary>
@@ -17,6 +20,25 @@ namespace 小玩意
             ObservableCollection<S7Model> S7modes;
             List<S7Model> S7modeslist = new List<S7Model>();
             //<List<S7Model>, ObservableCollection<S7Model>>? tuple;
+            Task.Factory.StartNew(() =>
+            {
+                ReadExecl.WriteDataXlsx
+                    (
+                    new SaveModel()
+                    {
+                        Title_Row = new List<string> { "标题1", "标题2", "标题3", "标题4", "标题5" },
+                        Data_Row = new List<List<string>>
+                        {
+                        new List<string>() { "11", "22", "33", "44", "55" },
+                         new List<string>() { "111", "222", "333", "444", "555" },
+                         new List<string>() { "111", "222", "333", "444", "555" },
+                         new List<string>() { "111", "222", "333", "444", "555" }
+                        }
+                    }
+                    );
+            }
+        );
+
             //TODO:后续补充读取数据库或者配置文件代码
             //S7modes 这个是用来绑定到界面的设备数量 配置了多少就new多少个 
             S7modes = new ObservableCollection<S7Model>()
@@ -78,5 +100,6 @@ namespace 小玩意
             return tcpModels;
         }
 
+        
     }
 }

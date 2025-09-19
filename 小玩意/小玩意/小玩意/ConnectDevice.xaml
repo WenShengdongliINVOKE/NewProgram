@@ -271,8 +271,8 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="TCP" Background="#FFE4E1" FontSize="20" Margin="20"/>
-                            <Button Grid.Column="1" Name="oc" Width="200" FontSize="20" Height="40" Style="{StaticResource ModernButtonStyle1}" Content="Internet"/>
+                            <TextBlock Text="ABB" Background="#FFE4E1" FontSize="20" Margin="20"/>
+                            <Button Grid.Column="1" Name="oc" Width="200" FontSize="20" Height="40" Style="{StaticResource ModernButtonStyle1}" Content="连接"  Command="{Binding }"  />
                         </Grid>
                     </StackPanel>
                     <StackPanel Grid.Row="2" >

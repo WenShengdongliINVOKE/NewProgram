@@ -38,7 +38,7 @@ namespace 小玩意.ViewModel
             {
                 SetGIFWindow(number);
                 _errorText = str;
-                _colors = new SolidColorBrush(Colors.Gray);
+                _colors = new SolidColorBrush(Colors.Black);
             }
             else
             {
