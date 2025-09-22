@@ -37,6 +37,8 @@
                     <Button x:Name="AboutBtn" Content="机器人信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" CommandParameter = "AbbRobot"  Click="NavigateToPage"/>
                     <Button x:Name="ContactBtn" Content="轴信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" Click="NavigateToPage"/>
                     <Button x:Name="ccc" Content="加工中心信息" Width="100" Margin=" 10,1,10,1" Style="{StaticResource ModernButtonStyle1}" Click="NavigateToPage" />
+                  
+                    <Button x:Name="Weather" Content="天气" Width="100" Margin="10,1,10,1" Style="{StaticResource ModernButtonStyle1}" CommandParameter="Weather" Click="NavigateToPage" />
                 </StackPanel>
             </StackPanel>
         </Border>

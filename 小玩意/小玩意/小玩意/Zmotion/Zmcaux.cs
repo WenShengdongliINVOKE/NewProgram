@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Runtime.InteropServices;
 using System.Text;
-using System.Runtime.InteropServices;
 
 /********************************** ZMC系列控制器  ************************************************
 **--------------文件信息--------------------------------------------------------------------------------
@@ -49,7 +47,7 @@ namespace cszmcaux
 
     public class zmcaux
     {
-        
+
 
         /// <summary>
         /// Execute在线命令
@@ -3299,7 +3297,7 @@ namespace cszmcaux
         /// <param name="itypecode">上传类型码</param>
         /// <param name="idatalength">数据长度</param>
         /// <param name="pdata">上报数据指针</param> [MarshalAs(UnmanagedType.LPArray, SizeConst = 2048)]byte[] pdata
-        public delegate void ZAuxCallBack(IntPtr handle, Int32 itypecode, Int32 idatalength,  StringBuilder pdata);
+        public delegate void ZAuxCallBack(IntPtr handle, Int32 itypecode, Int32 idatalength, StringBuilder pdata);
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_SetAutoUpCallBack", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 ZAux_SetAutoUpCallBack(IntPtr handle, ZAuxCallBack pcallback);
 
@@ -3314,7 +3312,7 @@ namespace cszmcaux
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_SetOutMulti", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 ZAux_Direct_SetOutMulti(IntPtr handle, UInt16 iofirst, UInt16 ioend, UInt32[] istate);
 
-            /// <summary>
+        /// <summary>
         /// 读取多路输出
         /// </summary>
         /// <param name="handle">连接句柄</param>
@@ -3336,7 +3334,7 @@ namespace cszmcaux
         /// <param name="pfDposlist">运动位置列表</param>
         /// <returns>错误码</returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_MultiMove", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_Direct_MultiMove(IntPtr handle,int iMoveLen, int imaxaxises, int[] piAxislist, float[] pfDposlist);
+        public static extern Int32 ZAux_Direct_MultiMove(IntPtr handle, int iMoveLen, int imaxaxises, int[] piAxislist, float[] pfDposlist);
 
         /// <summary>
         /// 多轴绝对直线插补运动
@@ -3348,7 +3346,7 @@ namespace cszmcaux
         /// <param name="pfDposlist">运动位置列表</param>
         /// <returns>错误码</returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_MultiMoveAbs", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_Direct_MultiMoveAbs(IntPtr handle,int iMoveLen, int imaxaxises, int[] piAxislist, float[] pfDposlist);
+        public static extern Int32 ZAux_Direct_MultiMoveAbs(IntPtr handle, int iMoveLen, int imaxaxises, int[] piAxislist, float[] pfDposlist);
 
         /// <summary>
         /// 机械手坐标系旋转
@@ -3410,7 +3408,7 @@ namespace cszmcaux
         /// <param name="run_mode">下载到RAM-ROM  0-RAM  1-ROM</param>
         /// <returns>错误码</returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_ZarDown", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_ZarDown(IntPtr handle, String Filename,UInt32 run_mode);
+        public static extern Int32 ZAux_ZarDown(IntPtr handle, String Filename, UInt32 run_mode);
 
         /// <summary>
         /// 读取RTC时间
@@ -3454,7 +3452,7 @@ namespace cszmcaux
         /// <param name="DatumOffset">二次回零偏移距离</param>
         /// <returns></returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_UserDatum", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_Direct_UserDatum(IntPtr handle, Int32 iaxis, Int32 imode,float HighSpeed,float LowSpeed,float DatumOffset);
+        public static extern Int32 ZAux_Direct_UserDatum(IntPtr handle, Int32 iaxis, Int32 imode, float HighSpeed, float LowSpeed, float DatumOffset);
 
         /// <summary>
         /// 设置轴的螺距补偿，扩展轴无效。
@@ -3469,7 +3467,7 @@ namespace cszmcaux
         /// <param name="pfDisancelist">区间补偿值列表</param>
         /// <returns></returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_Pitchset", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_Direct_Pitchset(IntPtr handle,Int32 iaxis,Int32 iEnable,float StartPos,UInt32 maxpoint,float DisOne ,UInt32 TablNum,float [] pfDisancelist);
+        public static extern Int32 ZAux_Direct_Pitchset(IntPtr handle, Int32 iaxis, Int32 iEnable, float StartPos, UInt32 maxpoint, float DisOne, UInt32 TablNum, float[] pfDisancelist);
 
         /// <summary>
         /// 设置轴的螺距双向补偿，扩展轴无效。
@@ -3486,7 +3484,7 @@ namespace cszmcaux
         /// <param name="RevpfDisancelist">反向区间补偿值列表 补偿数据方向于正向方向一致</param>
         /// <returns></returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_Pitchset2", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_Direct_Pitchset2(IntPtr handle,Int32 iaxis,Int32 iEnable,float StartPos,UInt32 maxpoint,float DisOne ,UInt32 TablNum,float [] pfDisancelist,UInt32 RevTablNum,float [] RevpfDisancelist);
+        public static extern Int32 ZAux_Direct_Pitchset2(IntPtr handle, Int32 iaxis, Int32 iEnable, float StartPos, UInt32 maxpoint, float DisOne, UInt32 TablNum, float[] pfDisancelist, UInt32 RevTablNum, float[] RevpfDisancelist);
 
 
         /// <summary>
@@ -3498,7 +3496,7 @@ namespace cszmcaux
         /// <param name="PitchDist">补偿距离</param>
         /// <returns></returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_GetPitchStatus", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_Direct_GetPitchStatus(IntPtr handle,Int32 iaxis,ref Int32 IfEnable,ref float PitchDist);
+        public static extern Int32 ZAux_Direct_GetPitchStatus(IntPtr handle, Int32 iaxis, ref Int32 IfEnable, ref float PitchDist);
 
         /// <summary>
         /// 多轴多段线直线连续插补 
@@ -3512,7 +3510,7 @@ namespace cszmcaux
         /// <param name="iReBuffLen"></param>
         /// <returns></returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_MultiLineN", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_Direct_MultiLineN(IntPtr handle,Int32 imode,Int32 iMoveLen, Int32 imaxaxises, Int32 []piAxislist, float []pfDisancelist,ref Int32 iReBuffLen);
+        public static extern Int32 ZAux_Direct_MultiLineN(IntPtr handle, Int32 imode, Int32 iMoveLen, Int32 imaxaxises, Int32[] piAxislist, float[] pfDisancelist, ref Int32 iReBuffLen);
 
         /// <summary>
         /// 皮带同步跟随运动
@@ -3528,7 +3526,7 @@ namespace cszmcaux
         /// <returns>错误码</returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_Direct_MoveSync", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 ZAux_Direct_MoveSync(IntPtr handle, float imode, int synctime, float syncposition, int syncaxis, int imaxaxises, int[] piAxislist, float[] pfDposlist);
-    
+
         /// <summary>
         /// 连续位置锁存指令
         /// </summary>
@@ -3563,7 +3561,7 @@ namespace cszmcaux
         /// <param name="value">写入值</param>
         /// <returns></returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_BusCmd_NodePdoWrite", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_BusCmd_NodePdoWrite(IntPtr handle, UInt32 inode, UInt32 index, UInt32 subindex, UInt32 type, Int32 value);	
+        public static extern Int32 ZAux_BusCmd_NodePdoWrite(IntPtr handle, UInt32 inode, UInt32 index, UInt32 subindex, UInt32 type, Int32 value);
 
         /// <summary>
         /// Pdo读操作
@@ -3626,7 +3624,7 @@ namespace cszmcaux
         /// <param name="pvalue">返回值</param>
         /// <returns>错误码</returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_CycleUpReadBuff", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern Int32 ZAux_CycleUpReadBuff(IntPtr handle, UInt32 cycleindex, string psetesname, UInt32 isetindex,ref double pvalue);
+        public static extern Int32 ZAux_CycleUpReadBuff(IntPtr handle, UInt32 cycleindex, string psetesname, UInt32 isetindex, ref double pvalue);
 
         /// <summary>
         /// 从周期上报里面读取内容Int32格式
@@ -3669,7 +3667,7 @@ namespace cszmcaux
         [DllImport("zmotion.dll", EntryPoint = "ZMC_GetState", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 ZMC_GetState(IntPtr handle, byte[] pstate);
 
-         /// <summary>
+        /// <summary>
         /// 读取脚本输出的信息
         /// </summary>
         /// <param name="handle">连接句柄</param>
@@ -3743,5 +3741,5 @@ namespace cszmcaux
         /// <returns></returns>
         [DllImport("zauxdll.dll", EntryPoint = "ZAux_3FileRamDownEnd", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 ZAux_3FileRamDownEnd(IntPtr handle, int ifile3num);
-        }
+    }
 }

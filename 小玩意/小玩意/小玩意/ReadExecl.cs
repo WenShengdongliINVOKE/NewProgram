@@ -1,43 +1,42 @@
-﻿using OfficeOpenXml;
-using S7.Net.Types;
-using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Reflection;
+﻿using ClosedXML.Excel;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using OfficeOpenXml;
-using ClosedXML.Excel;
-using 小玩意.ViewModel;
-using 小玩意.Model;
+using System.Data;
+using System.IO;
+using System.Reflection;
 using System.Windows;
+using 小玩意.Model;
+using 小玩意.ViewModel;
 
 namespace 小玩意
 {
     class ReadExecl
     {
-
-        public static void ReadIniFile()
+        /// <summary>
+        /// 读取配置文件
+        /// </summary>
+        /// <returns></returns>
+        public static ReadIniModel ReadIniFile()
         {
             // EPPlus 5.0+ 需要设置 LicenseContext
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-            //string ss = "2025/03/20;09:20:15;000;002;2550;0000;2550;0004;0001;00000;00000;0231;000;000;000;000;000;000;000;000;000;000;000;00000;000;000;0000;0000;0000;0000;0000;00000;00000;0000;000;000;000;000;000;000;000;000;000;000;000;32323;32338;32335;32331;32325;32337;32331;32331;32326;32333;32303;32316;32333;32341;32332;32336;32323;32319;32334;32339;32331;32338;32311;32343;32355;32358;32360;32360;32355;32360;32357;32356;32357;32327;32341;32360;32367;32359;32348;32340;32346;32355;32344;32359;32367;32328;32332;32355;32360;32351;32336;32355;32362;32353;32351;32353;32328;32324;32366;32354;32337;32354;32351;32364;32342;32343;32355;32364;32322;32334;32351;32353;32352;32364;32347;32360;32355;32357;32358;32341;32344;32357;32360;32361;32363;32342;32355;32368;32358;32335;32337;32336;32392;32405;32416;32424;32354;32423;32395;32427;32419;32421;32402;32400;32419;32424;32411;32431;32363;32433;32445;32425;32429;32423;32401;32338;32356;32349;32355;32361;32342;32359;32362;32349;32352;32330;32335;32355;32354;32350;32347;32356;32350;32358;32350;32343;32358;32339;32319;32337;32336;32327;32337;32327;32324;32335;32330;32326;32310;32328;32331;32332;32343;32334;32343;32336;32337;32346;32341;32330;32314;32334;32349;32347;32353;32356;32349;32365;32341;32341;32355;32338;32337;32352;32357;32349;32354;32359;32357;32351;32349;32356;32361;32343;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000;0000000;0000000;0000000;0000000;0000000;0000000;0000000;0000000;0;0";
-            //string sss = "32 30 32 35 2f 30 33 2f 32 30 20 30 39 3a 32 30 3a 31 \r\n35 20 30 30 30 20 \r\n30 30 32 20 32 35 \r\n35 30 20 30 30 30 \r\n30 20 32 35 35 30 \r\n20 30 30 30 34 20 \r\n30 30 30 31 20 30 \r\n30 30 30 30 20 30 \r\n30 30 30 30 20 30 \r\n32 33 31 20 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 20 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 20 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 20 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 30 30 20 \r\n30 30 30 20 30 30 \r\n30 20 30 30 30 30 \r\n20 30 30 30 30 20 \r\n30 30 30 30 20 30 \r\n30 30 30 20 30 30 \r\n30 30 20 30 30 30 \r\n30 30 20 30 30 30 \r\n30 30 20 30 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 20 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 20 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 20 30 30 \r\n30 20 30 30 30 20 \r\n30 30 30 20 33 32 \r\n33 32 33 20 33 32\r\n33 33 38 20 33 32\r\n33 33 35 20 33 32 \r\n33 33 31 20 33 32 \r\n33 32 35 20 33 32 \r\n33 33 37 20 33 32 \r\n33 33 31 20 33 32 \r\n33 33 31 20 33 32 \r\n33 32 36 20 33 32 \r\n33 33 33 20 33 32 \r\n33 30 33 20 33 32 \r\n33 31 36 20 33 32 \r\n33 33 33 20 33 32 \r\n33 34 31 20 33 32 \r\n33 33 32 20 33 32 \r\n33 33 36 20 33 32 \r\n33 32 33 20 33 32 \r\n33 31 39 20 33 32 \r\n33 33 34 20 33 32 \r\n33 33 39 20 33 32 \r\n33 33 31 20 33 32 \r\n33 33 38 20 33 32 \r\n33 31 31 20 33 32 \r\n33 34 33 20 33 32 \r\n33 35 35 20 33 32 \r\n33 35 38 20 33 32 \r\n33 36 30 20 33 32 \r\n33 36 30 20 33 32 \r\n33 35 35 20 33 32 \r\n33 36 30 20 33 32 \r\n33 35 37 20 33 32 \r\n33 35 36 20 33 32 \r\n33 35 37 20 33 32";
-            //string filePath = @"C:\path\to\your\file.xlsx";
+            var rowData = new ReadIniModel();
+            
             var filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             try
             {
-                filePath += "\\ini\\新建 Microsoft Excel 工作表.xlsx";
+                filePath += "\\ini\\配置文件.xlsx";
                 FileInfo fileInfo = new FileInfo(filePath);
 
 
                 if (!System.IO.File.Exists(filePath))
                 {
                     ErrorViewModel.Errornotice("文件不存在", true, 1);
-                    return;
+                    return null;
                 }
-
+                //读取Sheet1的数据
                 using (var workbook = new XLWorkbook(filePath))
                 {
                     // 获取第一个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
@@ -55,131 +54,231 @@ namespace 小玩意
 
                     if (headers.Count == 0)
                     {
-                        Console.WriteLine("❌ 第一行（标题行）为空，无法解析列名。");
-                        return;
+                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。",true,1);
+                        return null;
                     }
-
-                    Console.WriteLine("✅ 检测到标题列：");
-                    Console.WriteLine(string.Join(" | ", headers));
-                    Console.WriteLine(new string('-', 50));
 
                     // 从第二行开始读取数据
                     var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
-                    var rowData = new List<Tuple<string, string, string, string, string>>();
+                   
                     int rowIndex = 2; // 从 Excel 的第2行开始
                     foreach (var row in dataRows)
                     {
-                        Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                        rowData.Sheet1.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
 
-                        // 创建一个字典来存储 "列名 -> 值"
-
-
-                        //for (int i = 0; i < headers.Count; i++)
-                        //{
-                        //    // 获取当前列的单元格（列号 = i + 1）
-                        //    var cell = row.Cell(i + 1); // Cell 是从 1 开始编号的
-                        //    string value = cell.IsEmpty() ? "" : cell.Value.ToString().Trim();
-                            rowData.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty()?"": row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
-                        //}
-
-                        // 输出每个字段
-                        foreach (var kvp in rowData)
-                        {
-                            //Console.WriteLine($"  {kvp.Key}: {kvp.Value}");
-                        }
-
-                        Console.WriteLine(); // 空行分隔
                         rowIndex++;
                     }
                 }
-                    
+                //读取Sheet2的数据
+                using (var workbook = new XLWorkbook(filePath))
+                {
+                    // 获取第二个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
+                    var worksheet = workbook.Worksheet(2);
 
-                //ExcelToDatatable(filePath,"Sheet1",true);
-                //using (ExcelPackage package = new ExcelPackage(fileInfo))
-                //{
-                //    // 获取第一个工作表
-                //    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    // 读取第一行作为标题
+                    var headerRow = worksheet.Row(1); // 第1行是标题
+                    var headers = new List<string>();
 
-                //    // 获取表格维度（有效数据范围）
-                //    int rowCount = worksheet.Dimension.Rows;
-                //    int colCount = worksheet.Dimension.Columns;
+                    // 遍历第一行所有有内容的单元格，提取标题
+                    foreach (var cell in headerRow.CellsUsed())
+                    {
+                        headers.Add(cell.Value.ToString().Trim());
+                    }
 
-                //    Console.WriteLine($"共 {rowCount} 行 {colCount} 列数据");
-                //}
+                    if (headers.Count == 0)
+                    {
+                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
+                        return null;
+                    }
+
+                    // 从第二行开始读取数据
+                    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
+
+                    int rowIndex = 2; // 从 Excel 的第2行开始
+                    foreach (var row in dataRows)
+                    {
+                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                        rowData.Sheet2.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
+
+                        rowIndex++;
+                    }
+                }
+                //读取Sheet3的数据
+                using (var workbook = new XLWorkbook(filePath))
+                {
+                    // 获取第三个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
+                    var worksheet = workbook.Worksheet(3);
+
+                    // 读取第一行作为标题
+                    var headerRow = worksheet.Row(1); // 第1行是标题
+                    var headers = new List<string>();
+
+                    // 遍历第一行所有有内容的单元格，提取标题
+                    foreach (var cell in headerRow.CellsUsed())
+                    {
+                        headers.Add(cell.Value.ToString().Trim());
+                    }
+
+                    if (headers.Count == 0)
+                    {
+                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
+                        return null;
+                    }
+
+                    // 从第二行开始读取数据
+                    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
+
+                    int rowIndex = 2; // 从 Excel 的第2行开始
+                    foreach (var row in dataRows)
+                    {
+                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                        rowData.Sheet3.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
+
+                        rowIndex++;
+                    }
+                }
+                //读取Sheet4的数据
+                using (var workbook = new XLWorkbook(filePath))
+                {
+                    // 获取第四个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
+                    var worksheet = workbook.Worksheet(4);
+
+                    // 读取第一行作为标题
+                    var headerRow = worksheet.Row(1); // 第1行是标题
+                    var headers = new List<string>();
+
+                    // 遍历第一行所有有内容的单元格，提取标题
+                    foreach (var cell in headerRow.CellsUsed())
+                    {
+                        headers.Add(cell.Value.ToString().Trim());
+                    }
+
+                    if (headers.Count == 0)
+                    {
+                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
+                        return null;
+                    }
+
+                    // 从第二行开始读取数据
+                    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
+
+                    int rowIndex = 2; // 从 Excel 的第2行开始
+                    foreach (var row in dataRows)
+                    {
+                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                        rowData.Sheet4.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
+
+                        rowIndex++;
+                    }
+                }
+                //读取Sheet5的数据
+                using (var workbook = new XLWorkbook(filePath))
+                {
+                    // 获取第五个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
+                    var worksheet = workbook.Worksheet(5);
+
+                    // 读取第一行作为标题
+                    var headerRow = worksheet.Row(1); // 第1行是标题
+                    var headers = new List<string>();
+
+                    // 遍历第一行所有有内容的单元格，提取标题
+                    foreach (var cell in headerRow.CellsUsed())
+                    {
+                        headers.Add(cell.Value.ToString().Trim());
+                    }
+
+                    if (headers.Count == 0)
+                    {
+                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
+                        return null;
+                    }
+
+                    // 从第二行开始读取数据
+                    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
+
+                    int rowIndex = 2; // 从 Excel 的第2行开始
+                    foreach (var row in dataRows)
+                    {
+                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                        rowData.Sheet5.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
+
+                        rowIndex++;
+                    }
+                }
+
+                return rowData;
             }
             catch
             {
-                ErrorViewModel.Errornotice("文件已被占用或损坏请检查文件",true,1);
+                ErrorViewModel.Errornotice("文件已被占用或损坏请检查文件", true, 1);
+                return rowData;
             }
         }
 
 
         public static void WriteDataXlsx(SaveModel value)
         {
-            
-
-            // 创建 Excel 工作簿
-            using (var workbook = new XLWorkbook())
+            //这里直接在方法里面去异步写入
+            Task.Factory.StartNew(() =>
             {
-                var filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                //filePath += "\\Save\\";
-                var ws = workbook.Worksheets.Add("11");
+                //WriteExcel(value);
 
-                // 设置标题行
-                //var headers = new[] { "ID", "姓名", "年龄", "部门", "薪资" };
+                // 创建 Excel 工作簿
+                using (var workbook = new XLWorkbook())
+                {
+                    var filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    //filePath += "\\Save\\";
+                    var ws = workbook.Worksheets.Add("11");
 
-                foreach (var item in value.Title_Row)
-                {
-                    //ws.Cell(1, i + 1).Value = item;
-                    //ws.Cell(1, i + 1).Style.Font.Bold = true;
-                    //ws.Cell(1, i + 1).Style.Fill.BackgroundColor = XLColor.LightGray;
-                }
-                //加载标题栏
-                for (int i = 0; i < value.Title_Row.Count; i++)
-                {
-                    ws.Cell(1, i + 1).Value = value.Title_Row[i];
-                    ws.Cell(1, i + 1).Style.Font.Bold = true;
-                    ws.Cell(1, i + 1).Style.Font.FontName="华文宋体";
-                    ws.Cell(1, i + 1).Style.Font.FontSize = 20;
-                    ws.Cell(1, i + 1).Style.Fill.BackgroundColor = XLColor.AmberSaeEce;
-                }
-
-                // 填充数据 从第二行开始
-                int row = 2;
-                //这里是整个表格的数据处理 这里list有几个元素就代表这个表格有多少行
-                foreach (var emp in value.Data_Row)
-                {
-                    //这里是每一行的数据处理 这里list有几个元素就代表这一行有多少列
-                    int index = 1;
-                    foreach (var item in emp)
+                    //加载标题栏
+                    for (int i = 0; i < value.Title_Row.Count; i++)
                     {
-                        ws.Cell(row, index).Value = item;
-                        ws.Cell((int)row, index).Style.Font.FontName = "华文宋体";
-                        ws.Cell((int)row, index).Style.Font.FontSize = 15;
-                        ws.Cell((int)row, index).Style.Fill.BackgroundColor = XLColor.Green;
-                        index++;
+                        ws.Cell(1, i + 1).Value = value.Title_Row[i];
+                        ws.Cell(1, i + 1).Style.Font.Bold = true;
+                        ws.Cell(1, i + 1).Style.Font.FontName = "华文宋体";
+                        ws.Cell(1, i + 1).Style.Font.FontSize = 20;
+                        ws.Cell(1, i + 1).Style.Fill.BackgroundColor = XLColor.AmberSaeEce;
                     }
-                    row++;
+
+                    // 填充数据 从第二行开始
+                    int row = 2;
+                    //这里是整个表格的数据处理 这里list有几个元素就代表这个表格有多少行
+                    foreach (var emp in value.Data_Row)
+                    {
+                        //这里是每一行的数据处理 这里list有几个元素就代表这一行有多少列
+                        int index = 1;
+                        foreach (var item in emp)
+                        {
+                            ws.Cell(row, index).Value = item;
+                            ws.Cell((int)row, index).Style.Font.FontName = "华文宋体";
+                            ws.Cell((int)row, index).Style.Font.FontSize = 15;
+                            ws.Cell((int)row, index).Style.Fill.BackgroundColor = XLColor.Green;
+                            index++;
+                        }
+                        row++;
+                    }
+
+                    // 自动调整列宽
+                    //ws.Columns().AdjustToContents();
+                    ws.Columns("A:GZ").Width = 15;
+                    ws.Rows(1, 1000).Height = 25;
+                    // 设置表格边框（可选）
+                    var range = ws.Range(1, 1, value.Data_Row.Count + 1, value.Title_Row.Count);
+                    range.Style.Border.OutsideBorder = XLBorderStyleValues.Thick;
+                    range.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
+
+                    // 保存文件
+                    string SavefilePath = @$"D:\员工信息表{System.DateTime.Now.Month}.xlsx";
+                    workbook.SaveAs(SavefilePath);
+
+                    Application.Current.Dispatcher.Invoke(() =>
+                        {
+                            ErrorViewModel.Errornotice($"✅ Excel 表格已生成：{filePath}", false, 6);
+                        });
+
                 }
-
-                // 自动调整列宽
-                //ws.Columns().AdjustToContents();
-                ws.Columns("A:GZ").Width = 15;
-                ws.Rows(1,1000).Height = 25;
-                // 设置表格边框（可选）
-                var range = ws.Range(1, 1, value.Data_Row.Count + 1, value.Title_Row.Count);
-                range.Style.Border.OutsideBorder = XLBorderStyleValues.Thick;
-                range.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
-
-                // 保存文件
-                string SavefilePath = @$"D:\员工信息表{System.DateTime.Now.Month}.xlsx";
-                workbook.SaveAs(SavefilePath);
-                Application.Current.Dispatcher.Invoke(() =>
-                {
-                    ErrorViewModel.Errornotice($"✅ Excel 表格已生成：{filePath}", false, 6);
-                });
-               
-            }
+            });
         }
 
         /// <summary>

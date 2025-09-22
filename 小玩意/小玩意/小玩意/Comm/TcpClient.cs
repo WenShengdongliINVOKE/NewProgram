@@ -29,7 +29,7 @@ namespace 小玩意.Comm
 
             if (await Task.WhenAny(connectTask, timeoutTask) == timeoutTask)
             {
-               ErrorViewModel.Errornotice("连接超时，请检查服务器地址和端口是否正确。", true, 1);
+                ErrorViewModel.Errornotice("连接超时，请检查服务器地址和端口是否正确。", true, 1);
             }
 
             _stream = _client.GetStream();

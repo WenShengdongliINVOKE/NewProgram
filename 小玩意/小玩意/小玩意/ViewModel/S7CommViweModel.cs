@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using 小玩意.Comm;
@@ -23,7 +24,7 @@ namespace 小玩意.ViewModel
         public ICommand ItemSelectCommand { get; }
 
         /// <summary>
-        /// 
+        /// 当前选中设备的索引
         /// </summary>
         private S7Model _selectedSide;
         public S7Model SelectedSide
@@ -78,23 +79,53 @@ namespace 小玩意.ViewModel
         /// </summary>
         public int SelectedIndex { get; set; } = 0;
 
+        private static S7CommViweModel s7CommViweModel;
+
+        private static readonly object _obj = new object();
+
         public S7CommViweModel()
         {
             ConnCommand = new RelayCommand(S7ConnCommand);
             ItemSelectCommand = new RelayCommand(GetSelectedSide);
             (S7Models, MyDevice) = InitDevice.GetPlcDevice();
             //ErrorViewModel.Errornotice("1",false,1);          
-            S7ConnCommand();
+              S7ConnCommand();
+            Thread.Sleep(100);
             GetSelectPLCAllData();
 
         }
+        public static S7CommViweModel GetS7CommViweModel()
+        {
+
+            lock (_obj)
+            {
+
+
+                if (s7CommViweModel == null)
+                {
+                    s7CommViweModel = new S7CommViweModel();
+                    return s7CommViweModel;
+                }
+                else
+                {
+                    return s7CommViweModel;
+                }
+            }
+
+
+                //return this;
+        }
+           
+
+
+
 
         /// <summary>
         /// 与PLC建立通讯
         /// </summary>
-        private void S7ConnCommand()
+        private void  S7ConnCommand()
         {
-            Task.Factory.StartNew(async () =>
+             Task.Factory.StartNew(async () =>
             {
 
                 if (S7Models != null)
@@ -153,7 +184,7 @@ namespace 小玩意.ViewModel
 
         }
         bool Tmp = true;
-        int Tmpnums;
+        string Tmpnums =string.Empty;
         /// <summary>
         /// 向界面加载当前选中PLC的所有数据 默认优先加载第一个
         /// </summary>
@@ -167,11 +198,13 @@ namespace 小玩意.ViewModel
                 try
                 {
                     // var ss = ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address));
+                    //根据当前选择的PLC对象去找它的实例 找到此实例之后 调用它自己的 GetAllPlcDataAddress 方法
+                    //TODO 这里把 Siemens 类型改为它的接口 这样继承的子类都可以使用后面的正则表达式
                     var ReadAllPlc = await _siemens.FirstOrDefault(o => o._address == SelectedSide.S7Address).GetAllPlcDataAddress(ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address)));
-                    if ((Tmp) || Tmpnums != SelectedIndex)
+                    if ((Tmp) || Tmpnums != SelectedSide.S7Address)
                     {
                         Tmp = false;
-                        Tmpnums = SelectedIndex;
+                        Tmpnums = SelectedSide.S7Address;
                         //异步切换UI线程防止出现跨线程异常
                         Application.Current.Dispatcher.Invoke(() =>
                         {

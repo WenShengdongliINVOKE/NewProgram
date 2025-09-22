@@ -2,14 +2,14 @@
 
 namespace 小玩意.Comm
 {
-      internal  interface IPlccommiunctionCommand
+    internal interface IPlccommiunctionCommand
     {
         public bool WritePlcInt32(string DBaddress, string value);
         public bool WritePlcInt16(string DBaddress, string value);
 
         public bool WritePlcByte(string DBaddress, string value);
         public T ReadPlc<T>(T type, string address);
-        public  Task<List<S7ValueModel>> GetAllPlcDataAddress(List<Tuple<string, Siemens.Type, string, string>> DataAddresss);
+        //public Task<List<T>> GetAllPlcDataAddress(List<Tuple<string, Siemens.Type, string, string>> DataAddresss);
         //public void WritePlcInt32();
         //public void WritePlcInt32();
     }

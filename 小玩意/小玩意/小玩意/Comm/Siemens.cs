@@ -6,7 +6,7 @@ using 小玩意.ViewModel;
 
 namespace 小玩意.Comm
 {
-    public class Siemens :IPlccommiunctionCommand
+    public class Siemens : IPlccommiunctionCommand
     {
         public enum Type
         {
@@ -24,6 +24,9 @@ namespace 小玩意.Comm
         public string _address;
         public short _rack;
         public short _slot;
+        /// <summary>
+        /// 当前所使用的PLC对象
+        /// </summary>
         public Plc? _plc;
         public string? value;
 
@@ -221,52 +224,55 @@ namespace 小玩意.Comm
             /// </summary>
             List<S7ValueModel> addrssList = new List<S7ValueModel>();
             //这里按照数据类型去分类 把相同类型全都放到一个类型去做读取操作
-            await Task.Factory.StartNew(() =>
-            {
-                try
+            //if (false)  //没有PLC实物 连接时  这里不执行读取PLC操作 这里考虑加锁？
+            //{
+                await Task.Factory.StartNew(() =>
                 {
-                    var Bool = DataAddresss.FindAll(o => o.Item2 == Type.Bool);
-                    var Int16 = DataAddresss.FindAll(o => o.Item2 == Type.Int16);
-                    var Int32 = DataAddresss.FindAll(o => o.Item2 == Type.Int32);
-                    var Real = DataAddresss.FindAll(o => o.Item2 == Type.Real);
-                    var String = DataAddresss.FindAll(o => o.Item2 == Type.String);
-                    foreach (var item in Bool)
+                    try
                     {
-                        var ReadValue = ReadPlc(true, item.Item3);
-                        addrssList.Add(new S7ValueModel() { Name = item.Item1.ToString(), Address = item.Item2.ToString(), Value = ReadValue.ToString() });
-                    }
-                    foreach (var item in Int16)
-                    {
-                        var ReadValue = ReadPlc(1, item.Item3);
-                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
-                    }
-                    foreach (var item in Int32)
-                    {
-                        var ReadValue = ReadPlc(1, item.Item3);
-                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
+                        var Bool = DataAddresss.FindAll(o => o.Item2 == Type.Bool);
+                        var Int16 = DataAddresss.FindAll(o => o.Item2 == Type.Int16);
+                        var Int32 = DataAddresss.FindAll(o => o.Item2 == Type.Int32);
+                        var Real = DataAddresss.FindAll(o => o.Item2 == Type.Real);
+                        var String = DataAddresss.FindAll(o => o.Item2 == Type.String);
+                        foreach (var item in Bool)
+                        {
+                            var ReadValue = ReadPlc(true, item.Item3);
+                            addrssList.Add(new S7ValueModel() { Name = item.Item1.ToString(), Address = item.Item2.ToString(), Value = ReadValue.ToString() });
+                        }
+                        foreach (var item in Int16)
+                        {
+                            var ReadValue = ReadPlc(1, item.Item3);
+                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
+                        }
+                        foreach (var item in Int32)
+                        {
+                            var ReadValue = ReadPlc(1, item.Item3);
+                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
+
+                        }
+                        foreach (var item in Real)
+                        {
+                            var ReadValue = ReadPlc(1.1, item.Item3);
+                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
+                        }
+                        foreach (var item in String)
+                        {
+                            var ReadValue = ReadPlc("", item.Item3);
+                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
+                        }
 
                     }
-                    foreach (var item in Real)
+                    catch (Exception ex)
                     {
-                        var ReadValue = ReadPlc(1.1, item.Item3);
-                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
-                    }
-                    foreach (var item in String)
-                    {
-                        var ReadValue = ReadPlc("", item.Item3);
-                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
-                    }
+                        //TODO: 此处需要增加日志
 
+                        ErrorViewModel.Errornotice($"读取数据失败！Siemens.cs{ex.ToString()}", true, 1);
+                        //throw;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    //TODO: 此处需要增加日志
-
-                    ErrorViewModel.Errornotice($"读取数据失败！Siemens.cs{ex.ToString()}", true, 1);
-                    //throw;
-                }
-            }
-            );
+                );
+            //}
             return addrssList;
             // 这里按上面分好的类型去读取PLC的所有地址数据 每一种类型按分类去读取 每次读取一个
             // Task.Factory.StartNew(() =>

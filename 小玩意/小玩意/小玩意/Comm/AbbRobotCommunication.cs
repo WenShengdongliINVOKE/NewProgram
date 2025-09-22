@@ -150,14 +150,14 @@ namespace 小玩意
         /// 扫描机器人
         /// </summary>
         /// <returns>返回扫描到的所有机器人信息 Tuple<List<AbbRobotCommunication>返回一些基础信息，ControllerInfo[]返回详细信息 </returns>
-         private Tuple<List<AbbRobotCommunication>, ControllerInfo[]> GetABBRobot()
+        private Tuple<List<AbbRobotCommunication>, ControllerInfo[]> GetABBRobot()
         {
 
             NetworkScanner scanner = new NetworkScanner();
             ControllerInfo[] controllers;/*= new ControllerInfo[10];*/
 
             //用于接收所返回的机器人信息类
-           
+
             List<AbbRobotCommunication> abbRobotCommunications = new List<AbbRobotCommunication>();
             //List<Controller> controllerList = new List<Controller>();
             //abbRobotCommunications.Add(new AbbRobotCommunication());
@@ -269,7 +269,7 @@ namespace 小玩意
         /// <returns></returns>
         public AbbRobotCommunication GetAbbXYZ(string abbName, string programName, string dataName)
         {
-            
+
             if (controller.IsMaster == false && controller.OperatingMode == ControllerOperatingMode.Auto)
             {
                 try
@@ -461,11 +461,11 @@ namespace 小玩意
         /// 获取已知所有数据
         /// </summary>
         /// <param name="name"></param>
-        public void GetAllAbbRobotDataValue(Tuple<string,string ,string,string> RobotDataValue,int Value )
+        public void GetAllAbbRobotDataValue(Tuple<string, string, string, string> RobotDataValue, int Value)
         {
             //获取时使用
             controller = listcontroller.FirstOrDefault(o => o.Name == RobotDataValue.Item1);
-            ReadAbbDataNum(RobotDataValue.Item1,RobotDataValue.Item2,RobotDataValue.Item3,Value);
+            ReadAbbDataNum(RobotDataValue.Item1, RobotDataValue.Item2, RobotDataValue.Item3, Value);
 
 
         }

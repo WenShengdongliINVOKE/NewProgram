@@ -30,7 +30,7 @@
                   AutoGenerateColumns="False" BorderBrush="{x:Null}" Foreground="Red" 
                   HeadersVisibility="Column" HorizontalScrollBarVisibility="Hidden"
                   VerticalScrollBarVisibility="Auto" GridLinesVisibility="None"
-                  CanUserAddRows="False" ItemsSource="{Binding MyData}" 
+                  CanUserAddRows="False" ItemsSource="{Binding MyDevice}" 
                   SelectedItem="{Binding SelectedSide, Mode=TwoWay}"
                   Background="White"  FontSize="18"  SelectedCellsChanged ="DataGridText_SelectedCellsChanged" >
             <DataGrid.Columns>
@@ -39,7 +39,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Height="100" >
-                                <Label  Content="{Binding S7Address }"  Margin="20,10,0,10"></Label>
+                                <Label  Content="{Binding S7Address }"   Margin="20,10,0,10"></Label>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -49,7 +49,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <Label  Content="{Binding S7Lock }" Margin="20,10,0,10"></Label>
+                                <Label  Content="{Binding S7Rack }" Margin="20,10,0,10"></Label>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

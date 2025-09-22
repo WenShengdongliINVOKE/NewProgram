@@ -1,10 +1,7 @@
-﻿using OfficeOpenXml.Drawing.Slicer.Style;
-using System.Collections.Concurrent;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using 小玩意.ViewModel;
-using System.Collections.Generic;
 
 namespace 小玩意.Comm
 {
@@ -39,7 +36,7 @@ namespace 小玩意.Comm
         public async Task StartAsync(int port)
         {
             if (_isRunning)
-               ErrorViewModel.Errornotice("服务器已在运行中",false,1);
+                ErrorViewModel.Errornotice("服务器已在运行中", false, 1);
 
             _listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
@@ -778,4 +775,4 @@ namespace 小玩意.Comm
 
         }
     }
-    }
+}

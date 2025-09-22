@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Reflection;
-using System.Windows.Input;
 using 小玩意.Model;
 
 namespace 小玩意
@@ -20,24 +19,23 @@ namespace 小玩意
             ObservableCollection<S7Model> S7modes;
             List<S7Model> S7modeslist = new List<S7Model>();
             //<List<S7Model>, ObservableCollection<S7Model>>? tuple;
-            Task.Factory.StartNew(() =>
-            {
-                ReadExecl.WriteDataXlsx
-                    (
-                    new SaveModel()
-                    {
-                        Title_Row = new List<string> { "标题1", "标题2", "标题3", "标题4", "标题5" },
-                        Data_Row = new List<List<string>>
-                        {
-                        new List<string>() { "11", "22", "33", "44", "55" },
-                         new List<string>() { "111", "222", "333", "444", "555" },
-                         new List<string>() { "111", "222", "333", "444", "555" },
-                         new List<string>() { "111", "222", "333", "444", "555" }
-                        }
-                    }
-                    );
-            }
-        );
+            //var Result = ReadExecl.ReadIniFile();
+            //ReadExecl.WriteDataXlsx
+            //    (
+            //    new SaveModel()
+            //    {
+            //        Title_Row = new List<string> { "标题1", "标题2", "标题3", "标题4", "标题5" },
+            //        Data_Row = new List<List<string>>
+            //        {
+            //            new List<string>() { "11", "22", "33", "44", "55" },
+            //             new List<string>() { "111", "222", "333", "444", "555" },
+            //             new List<string>() { "111", "222", "333", "444", "555" },
+            //             new List<string>() { "111", "222", "333", "444", "555" }
+            //        }
+            //    }
+            //    );
+
+
 
             //TODO:后续补充读取数据库或者配置文件代码
             //S7modes 这个是用来绑定到界面的设备数量 配置了多少就new多少个 
@@ -77,7 +75,7 @@ namespace 小玩意
                 var attr = p.GetCustomAttribute<BrowsableAttribute>();
                 if (attr is not null) return attr.Browsable;
                 return true;
-            }).Select(pp => new { Key = pp.Name,Value = pp.GetValue(obj) }).Select(o=>$"{o.Key}:{o.Value}");
+            }).Select(pp => new { Key = pp.Name, Value = pp.GetValue(obj) }).Select(o => $"{o.Key}:{o.Value}");
             return string.Join(Environment.NewLine, res);
         }
         public static ObservableCollection<TcpModel> GetTcpDevice()
@@ -100,6 +98,6 @@ namespace 小玩意
             return tcpModels;
         }
 
-        
+
     }
 }

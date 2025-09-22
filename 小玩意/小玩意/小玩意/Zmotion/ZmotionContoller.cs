@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO.Compression;
+﻿using cszmcaux;
 using System.IO.Ports;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using cszmcaux;
 
 namespace 小玩意.Zmotion
 {
     class ZmotionContoller
     {
-        enum ZmotionCommnuicationType { 
-            TCP=1,
+        enum ZmotionCommnuicationType
+        {
+            TCP = 1,
             SerialPort = 2,
 
         }
 
-        
+
         IntPtr _intPtr;
         private string _ip;
         private int _port;
@@ -46,7 +42,7 @@ namespace 小玩意.Zmotion
         /// <param name="dataBits"></param>
         /// <param name="parity"></param>
         /// <param name="stopBits"></param>
-        public ZmotionContoller (int baudRate , int dataBits, Parity parity ,StopBits stopBits)
+        public ZmotionContoller(int baudRate, int dataBits, Parity parity, StopBits stopBits)
         {
             _baudRate = baudRate;
             _stopBits = stopBits;
@@ -60,21 +56,23 @@ namespace 小玩意.Zmotion
         /// </summary>
         /// <param name="ip"></param>
         /// <returns></returns>
-        public int SetIP(string ip) {
+        public int SetIP(string ip)
+        {
 
-            return zmcaux.ZAux_SetIp(_intPtr,ip);
+            return zmcaux.ZAux_SetIp(_intPtr, ip);
         }
 
         /// <summary>
         /// 搜索IP
         /// </summary>
         /// <returns></returns>
-        public int SearchIP() {
+        public int SearchIP()
+        {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append('\0', 255);
-            return zmcaux.ZAux_SearchEthlist(stringBuilder,255,1000);
+            return zmcaux.ZAux_SearchEthlist(stringBuilder, 255, 1000);
         }
 
-       
+
     }
 }

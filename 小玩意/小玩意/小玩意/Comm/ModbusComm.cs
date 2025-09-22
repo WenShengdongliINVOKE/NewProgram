@@ -8,7 +8,7 @@ namespace 小玩意.Comm
     /// </summary>
     internal class ModbusComm : IDisposable
     {
-       
+
         private int _baudRate;
 
         private string _portName;
@@ -39,7 +39,7 @@ namespace 小玩意.Comm
             this._parity = _parity;
             this._stopBits = _stopBits;
             this._dataBits = _dataBits;
-           
+
             if (SerialPort.IsOpen!)
             {
                 SerialPort.BaudRate = _baudRate;
@@ -107,10 +107,10 @@ namespace 小玩意.Comm
                 }
                 message = Message.MessageGeneration(slaveAddress, mode, startAddress, value);
 
-            
+
                 // byte [] result = GetReadMessage(slaveAddress, mode, startAddress, (bool)textBox2.Text);
                 //发送命令
-                ExecuteWithRetry(()=>SerialPort.Write(message, 0, message.Length));
+                ExecuteWithRetry(() => SerialPort.Write(message, 0, message.Length));
                 return message;
             }
             return null;
@@ -337,7 +337,7 @@ namespace 小玩意.Comm
         /// </summary>
         /// <param name="Message"></param>
         /// <returns></returns>
-        public bool WriteStringData( string Message)
+        public bool WriteStringData(string Message)
         {
             if (SerialPort.IsOpen)
             {
@@ -351,7 +351,7 @@ namespace 小玩意.Comm
 
                 ErrorViewModel.Errornotice("串口未连接，正在重新初始化串口 初始换完成后将重新发送", true, 2);
                 Thread.Sleep(500);
-                SerialPort = new SerialPort(this._portName, this._baudRate,this._parity,this._dataBits,this._stopBits);
+                SerialPort = new SerialPort(this._portName, this._baudRate, this._parity, this._dataBits, this._stopBits);
                 SerialPort.Open();
                 if (SerialPort.IsOpen)
                 {
@@ -362,16 +362,16 @@ namespace 小玩意.Comm
                     ErrorViewModel.Errornotice("串口打开失败，请检查硬件连接是否完好", true, 2);
                 }
 
-                    return false;
+                return false;
             }
-           
-           return true;
+
+            return true;
         }
         private void ExecuteWithRetry(Action action)
         {
             if (!SerialPort.IsOpen)
             {
-                throw new Exception ("未连接到Modbus设备");
+                throw new Exception("未连接到Modbus设备");
             }
 
             int attempt = 0;

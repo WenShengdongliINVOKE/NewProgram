@@ -1,13 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
+using DocumentFormat.OpenXml.Drawing.Charts;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media.Media3D;
+using 小玩意.Comm;
 using 小玩意.Model;
 
 namespace 小玩意.ViewModel
@@ -35,9 +30,20 @@ namespace 小玩意.ViewModel
             }
         }
 
+        private AbbRobotModel _selectedSide;
+        public AbbRobotModel SelectedSide
+        {
+            get => _selectedSide;
+            set {
+                SetProperty(ref _selectedSide, value);
+                OnPropertyChanged(nameof(SelectedSide));
+            }
+        
+        }
+
         public AbbRobotViewModel()
         {
-            
+
             RobotModels = new ObservableCollection<AbbRobotModel>();
             Task.Factory.StartNew(() =>
             {
@@ -51,10 +57,67 @@ namespace 小玩意.ViewModel
             );
         }
 
-        private void GetAbbRobotDataValue() { 
-        
-          
+        private void GetAbbRobotDataValue()
+        {
 
+
+
+        }
+
+
+        /// <summary>
+        /// 向界面加载当前选中PLC的所有数据 默认优先加载第一个
+        /// </summary>
+        private async Task GetSelectABBRobotAllData()
+        {
+
+            await Task.Factory.StartNew(async () =>
+            {
+                while (true)
+                {
+                    try
+                    {
+                        // var ss = ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address));
+                        //var ReadAllPlc = await _siemens.FirstOrDefault(o => o._address == SelectedSide.S7Address).GetAllPlcDataAddress(ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address)));
+                        //if ((Tmp) || Tmpnums != SelectedSide.S7Address)
+                        //{
+                        //    Tmp = false;
+                        //    Tmpnums = SelectedSide.S7Address;
+                        //    //异步切换UI线程防止出现跨线程异常
+                        //    Application.Current.Dispatcher.Invoke(() =>
+                        //    {
+                        //        if (MyDataValue.Any())
+                        //        {
+                        //            MyDataValue.Clear();
+                        //        }
+
+                        //        foreach (var item in ReadAllPlc)
+                        //        {
+                        //            MyDataValue.Add(new S7ValueModel() { Address = item.Address, Name = item.Name, Value = item.Value });
+                        //        }
+                        //    });
+                        //}
+                        ////异步切换UI线程防止出现跨线程异常
+                        //Application.Current.Dispatcher.Invoke(() =>
+                        //{
+                        //    //每次读取PLC数据后 更新界面数据
+                        //    foreach (var ReadAllPlcValue in MyDataValue)
+                        //    {
+                        //        ReadAllPlcValue.Name = ReadAllPlcValue.Name;
+                        //        ReadAllPlcValue.Address = ReadAllPlcValue.Address;
+                        //        ReadAllPlcValue.Value = ReadAllPlcValue.Value;
+                        //    }
+                        //});
+                    }
+                    catch (Exception ex)
+                    {
+
+                        ErrorViewModel.Errornotice(ex.Message, true, 1);
+                    }
+                }
+
+
+            });
         }
     }
 }
