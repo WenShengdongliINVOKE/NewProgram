@@ -3,8 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\sanling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\sanling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\siemens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\siemens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\sanlingvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\sanlingvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\readexecl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\readexecl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\readinimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\readinimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\viewmodel\\abbrobotviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\viewmodel\\abbrobotviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\weather.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\weather.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\weather.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\weather.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\abbrobotcommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\abbrobotcommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\viewmodel\\s7commviwemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,12 +51,28 @@
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\s7communication.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\viewmodel\\connectdeviceviwemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\viewmodel\\connectdeviceviwemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\s7valuemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\s7valuemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\s7model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\s7model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\abbrobotvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\abbrobotvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\s7communication.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\s7communication.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\iplccommiunctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\iplccommiunctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\viewmodel\\connectdeviceviwemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\viewmodel\\connectdeviceviwemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -35,28 +87,8 @@
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\sanling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\sanling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\siemens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\siemens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\sanlingvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\sanlingvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\s7valuemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\s7valuemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\tcpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\iplccommiunctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\iplccommiunctioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\abbrobot.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -71,24 +103,12 @@
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\connectdevice.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\s7model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\s7model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\initdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\initdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\weather.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\weather.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,18 +117,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\readexecl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\readexecl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\weather.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\weather.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\readinimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\readinimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\errorbox.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,20 +139,12 @@
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\abbrobot.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\comm\\abbrobotcommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\comm\\abbrobotcommunication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\userwindowselcet\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\userwindowselcet\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\userwindowselcet\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\userwindowselcet\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\abbrobotvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|solutionrelative:\u5C0F\u73A9\u610F\\model\\abbrobotvaluemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4DBB733C-DB10-4D32-A46B-CC67A05D88D1}|\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj|c:\\users\\25062\\desktop\\new\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\model\\abbrobotmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -273,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "AbbRobot.xaml",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\AbbRobot.xaml",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\AbbRobot.xaml",
@@ -281,12 +281,153 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\AbbRobot.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-17T08:01:23.419Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AbbRobotViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA9wD0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T08:26:36.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Weather.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Weather.xaml.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Weather.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T03:24:29.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReadExecl.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ReadExecl.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ReadExecl.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ReadExecl.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ReadExecl.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAMwBQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:11:31.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wCEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T02:39:08.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReadIniModel.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T02:37:08.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SanLing.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAA6wG8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T05:26:51.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Siemens.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAA6wL0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T08:14:48.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SanLingValueModel.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T08:57:22.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Weather.xaml",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Weather.xaml",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Weather.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-20T03:02:59.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AbbRobotCommunication.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
+              "ViewState": "AgIAAMgBAAAAAAAAAAA6wNMBAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T03:23:39.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "S7CommViweModel.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAswLkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:18:04.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "S7Communication.xaml",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\S7Communication.xaml",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\S7Communication.xaml",
@@ -298,136 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-18T08:44:03.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "S7Communication.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAACQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T07:25:10.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConnectDeviceViweModel.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAIA5wBwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T06:09:23.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "S7CommViweModel.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\S7CommViweModel.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAMBCwMMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T01:18:04.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AbbRobotViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\AbbRobotViewModel.cs",
-              "ViewState": "AgIAAFwAAABAzszMzEw2wGMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:26:36.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CheckSum.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\CheckSum.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\CheckSum.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\CheckSum.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\CheckSum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T08:32:02.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T07:42:52.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SanLing.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\SanLing.cs",
-              "ViewState": "AgIAAFsAAAAABQAAAAAcwGIAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T05:26:51.161Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Siemens.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\Siemens.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAAANoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:14:48.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SanLingValueModel.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\SanLingValueModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T08:57:22.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "S7ValueModel.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\S7ValueModel.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\S7ValueModel.cs",
@@ -440,58 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TcpClient.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAADsAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T13:29:07.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "IPlccommiunctionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAIA5wA0AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T04:21:58.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ConnectDevice.xaml",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-12T07:20:12.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ConnectDevice.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAEwA0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T07:20:29.456Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "S7Model.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\S7Model.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\S7Model.cs",
@@ -504,7 +465,129 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AbbRobotValueModel.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T10:21:38.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "S7Communication.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\S7Communication.xaml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T07:25:10.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IPlccommiunctionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\IPlccommiunctionCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T04:21:58.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-02-18T08:44:03.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ConnectDeviceViweModel.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\ConnectDeviceViweModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA5wBwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T06:09:23.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CheckSum.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\CheckSum.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\CheckSum.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\CheckSum.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\CheckSum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T08:32:02.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T07:42:52.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TcpClient.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\TcpClient.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T13:29:07.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ConnectDevice.xaml",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-12T07:20:12.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ConnectDevice.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
+              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
+              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
+              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ConnectDevice.xaml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAEwA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T07:20:29.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "InitDevice.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\InitDevice.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\InitDevice.cs",
@@ -512,12 +595,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\InitDevice.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAzwBAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T07:29:02.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T07:29:02.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\App.xaml.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\App.xaml.cs",
@@ -525,25 +607,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\App.xaml.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAIA7wEIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T06:00:09.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T06:00:09.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAA1wE8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T02:39:08.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "WeatherInfo.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\WeatherInfo.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\WeatherInfo.cs",
@@ -551,12 +619,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\WeatherInfo.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAiwBMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T02:52:25.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T02:52:25.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "WeatherService.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\WeatherService.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\WeatherService.cs",
@@ -564,38 +631,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\WeatherService.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAUwB0AAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T02:53:12.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T02:53:12.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Weather.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Weather.xaml.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Weather.xaml.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAA4wEUAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T03:24:29.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ReadExecl.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ReadExecl.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ReadExecl.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ReadExecl.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\ReadExecl.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAswBoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T12:11:31.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Zmcaux.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Zmotion\\Zmcaux.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Zmotion\\Zmcaux.cs",
@@ -603,37 +643,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Zmotion\\Zmcaux.cs",
               "ViewState": "AgIAAEgNAAAAAAAAAEBGwFANAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T12:41:05.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T12:41:05.863Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ReadIniModel.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\ReadIniModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAjwAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T02:37:08.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Weather.xaml",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Weather.xaml",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Weather.xaml",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Weather.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-20T03:02:59.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ViewModel\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ViewModel\\ErrorViewModel.cs",
@@ -641,12 +655,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\ErrorViewModel.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAhwCgAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T05:22:23.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T05:22:23.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "AbbRobot.xaml.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\AbbRobot.xaml.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\AbbRobot.xaml.cs",
@@ -654,12 +667,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\AbbRobot.xaml.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAIBGwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T08:28:56.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T08:28:56.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "ErrorBox.xaml.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ErrorBox.xaml.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\ErrorBox.xaml.cs",
@@ -667,12 +679,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\ErrorBox.xaml.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAawAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T05:22:04.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T05:22:04.753Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "SaveModel.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\SaveModel.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\SaveModel.cs",
@@ -680,25 +691,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\SaveModel.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAuwAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T08:13:05.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T08:13:05.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "AbbRobotCommunication.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\AbbRobotCommunication.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAMBowEkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T03:23:39.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "INavigationService.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\UserWindowSelcet\\INavigationService.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\UserWindowSelcet\\INavigationService.cs",
@@ -706,12 +703,11 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\UserWindowSelcet\\INavigationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T13:51:15.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:51:15.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\UserWindowSelcet\\NavigationService.cs",
               "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\UserWindowSelcet\\NavigationService.cs",
@@ -719,21 +715,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\UserWindowSelcet\\NavigationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAMBYwA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T13:52:08.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "AbbRobotValueModel.cs",
-              "DocumentMoniker": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
-              "RelativeDocumentMoniker": "\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
-              "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
-              "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\AbbRobotValueModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T10:21:38.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T13:52:08.428Z"
             },
             {
               "$type": "Document",
@@ -745,8 +727,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\AbbRobotModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T10:09:58.428Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-17T10:09:58.428Z"
             },
             {
               "$type": "Document",
@@ -758,8 +739,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\TCP.xaml.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAD4vxsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T11:08:15.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T11:08:15.555Z"
             },
             {
               "$type": "Document",
@@ -782,8 +762,7 @@
               "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\TCP.xaml",
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\TCP.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-12T07:54:48.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T07:54:48.945Z"
             },
             {
               "$type": "Document",
@@ -795,8 +774,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Message.cs",
               "ViewState": "AgIAAAQBAAAAAAAAAMBowKAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T08:30:34.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T08:30:34.01Z"
             },
             {
               "$type": "Document",
@@ -808,8 +786,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\GridCell.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T03:02:57.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T03:02:57.529Z"
             },
             {
               "$type": "Document",
@@ -820,8 +797,7 @@
               "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\ErrorBox.xaml",
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\ErrorBox.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-11T03:40:32.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T03:40:32.681Z"
             },
             {
               "$type": "Document",
@@ -832,8 +808,7 @@
               "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\UserControl.xaml",
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\UserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-17T03:07:14.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T03:07:14.832Z"
             },
             {
               "$type": "Document",
@@ -845,8 +820,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Zmotion\\ZmotionContoller.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAiwEkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T12:43:47.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-16T12:43:47.83Z"
             },
             {
               "$type": "Document",
@@ -858,8 +832,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\755b203da153c1147be7834a6e00b7c2948c66d9e563d069c387935ad0a5839e\\NavigationService.cs",
               "ViewState": "AgIAAP8DAAAAAAAAAAA3wAcEAAADAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:58:52.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T06:58:52.869Z"
             },
             {
               "$type": "Document",
@@ -871,8 +844,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\6b2dfb9d5e4949b718ee78fa9415cabf37518e9447a2764ba224d240518b710f\\ResourcePart.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAtwCYAAAAEAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:57:45.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T06:57:45.513Z"
             },
             {
               "$type": "Document",
@@ -884,8 +856,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\obj\\Debug\\net8.0-windows\\S7Comm.g.i.cs",
               "ViewState": "AgIAAFcAAAAAAAAAAIAzwGUAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T06:52:39.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T06:52:39.374Z"
             },
             {
               "$type": "Document",
@@ -897,8 +868,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\07562dd9ba86a0a5fead5117dd68e3c724f52eea01f79d4441c442c042cad972\\XamlReader.cs",
               "ViewState": "AgIAAHsBAAAAAAAAAAAtwIcBAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-04T05:16:52.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T05:16:52.998Z"
             },
             {
               "$type": "Document",
@@ -910,8 +880,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\obj\\Debug\\net8.0-windows\\UserControl.g.i.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAA0wD0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T03:08:00.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-29T03:08:00.692Z"
             },
             {
               "$type": "Document",
@@ -923,8 +892,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\obj\\Debug\\net8.0-windows\\App.g.i.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAA7wEIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T13:10:26.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-22T13:10:26.679Z"
             },
             {
               "$type": "Document",
@@ -936,8 +904,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\ViewModel\\TcpCommViwemodel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T01:09:21.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T01:09:21.751Z"
             },
             {
               "$type": "Document",
@@ -949,8 +916,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Model\\TcpModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T08:21:46.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T08:21:46.558Z"
             },
             {
               "$type": "Document",
@@ -974,8 +940,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\MainWindow.xaml",
               "ViewState": "AgIAABcAAAAAAAAAAAAMwBwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-18T08:12:21.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T08:12:21.152Z"
             },
             {
               "$type": "Document",
@@ -987,8 +952,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\TcpServer.cs",
               "ViewState": "AgIAAJECAAAAAAAAAAAawJMCAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T13:21:21.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T13:21:21.721Z"
             },
             {
               "$type": "Document",
@@ -1010,8 +974,7 @@
               "ToolTip": "C:\\Users\\25062\\Desktop\\New\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj",
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-09T03:56:19.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T03:56:19.408Z"
             },
             {
               "$type": "Document",
@@ -1023,8 +986,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\\u5C0F\u73A9\u610F.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-11T11:54:01.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-11T11:54:01.065Z"
             },
             {
               "$type": "Document",
@@ -1036,8 +998,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\Comm\\ModbusComm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T08:18:36.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T08:18:36.626Z"
             },
             {
               "$type": "Document",
@@ -1049,8 +1010,7 @@
               "RelativeToolTip": "\u5C0F\u73A9\u610F\\obj\\Debug\\net8.0-windows\\MainWindow.g.i.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAswC4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T06:47:56.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T06:47:56.053Z"
             },
             {
               "$type": "Document",

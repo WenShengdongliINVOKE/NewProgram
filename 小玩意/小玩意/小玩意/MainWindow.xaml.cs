@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using 小玩意.Model;
 using 小玩意.ViewModel;
 
 namespace 小玩意
@@ -18,6 +19,8 @@ namespace 小玩意
         //private static Mutex mutex;
         private readonly Dictionary<string, Page> _pageCache = new Dictionary<string, Page>();
 
+       public static ReadIniModel readIniModel = new ReadIniModel();
+
         public MainWindow()
         {
 
@@ -27,6 +30,8 @@ namespace 小玩意
             this.MaxHeight = SystemParameters.PrimaryScreenHeight;
             // 默认导航到首页
             NavigateToPage("ConnectDevice.xaml", null);
+
+           readIniModel = ReadExecl.ReadIniFile();
 
         }
         /// <summary>

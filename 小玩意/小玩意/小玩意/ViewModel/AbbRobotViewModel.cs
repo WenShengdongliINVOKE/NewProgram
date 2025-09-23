@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Drawing.Charts;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows;
 using 小玩意.Comm;
 using 小玩意.Model;
 
@@ -41,13 +42,15 @@ namespace 小玩意.ViewModel
         
         }
 
+        AbbRobotCommunication abbRobotCommunication;
+
         public AbbRobotViewModel()
         {
 
             RobotModels = new ObservableCollection<AbbRobotModel>();
             Task.Factory.StartNew(() =>
             {
-                AbbRobotCommunication abbRobotCommunication = new AbbRobotCommunication();
+                abbRobotCommunication = new AbbRobotCommunication();
                 int i = 1;
                 foreach (var item in abbRobotCommunication.controllerInfo)
                 {
@@ -55,7 +58,11 @@ namespace 小玩意.ViewModel
                 }
             }
             );
+
+            ReadExecl.ReadIniFile();
         }
+
+       
 
         private void GetAbbRobotDataValue()
         {
@@ -64,9 +71,10 @@ namespace 小玩意.ViewModel
 
         }
 
-
+        bool Tmp = true;
+        string Tmpnums = string.Empty;
         /// <summary>
-        /// 向界面加载当前选中PLC的所有数据 默认优先加载第一个
+        /// 向界面加载当前选中机器人的所有数据 默认优先加载第一个
         /// </summary>
         private async Task GetSelectABBRobotAllData()
         {
@@ -77,37 +85,37 @@ namespace 小玩意.ViewModel
                 {
                     try
                     {
-                        // var ss = ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address));
-                        //var ReadAllPlc = await _siemens.FirstOrDefault(o => o._address == SelectedSide.S7Address).GetAllPlcDataAddress(ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address)));
-                        //if ((Tmp) || Tmpnums != SelectedSide.S7Address)
-                        //{
-                        //    Tmp = false;
-                        //    Tmpnums = SelectedSide.S7Address;
-                        //    //异步切换UI线程防止出现跨线程异常
-                        //    Application.Current.Dispatcher.Invoke(() =>
-                        //    {
-                        //        if (MyDataValue.Any())
-                        //        {
-                        //            MyDataValue.Clear();
-                        //        }
+                        //var ss = ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address));
+                        var ReadAllPlc = await abbRobotCommunication.GetAllAbbRobotDataValue() ;
+                        if ((Tmp) || Tmpnums != SelectedSide.Name)
+                        {
+                            Tmp = false;
+                            Tmpnums = SelectedSide.Name;
+                            //异步切换UI线程防止出现跨线程异常
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                if (AbbRobotValueModels.Any())
+                                {
+                                    AbbRobotValueModels.Clear();
+                                }
 
-                        //        foreach (var item in ReadAllPlc)
-                        //        {
-                        //            MyDataValue.Add(new S7ValueModel() { Address = item.Address, Name = item.Name, Value = item.Value });
-                        //        }
-                        //    });
-                        //}
-                        ////异步切换UI线程防止出现跨线程异常
-                        //Application.Current.Dispatcher.Invoke(() =>
-                        //{
-                        //    //每次读取PLC数据后 更新界面数据
-                        //    foreach (var ReadAllPlcValue in MyDataValue)
-                        //    {
-                        //        ReadAllPlcValue.Name = ReadAllPlcValue.Name;
-                        //        ReadAllPlcValue.Address = ReadAllPlcValue.Address;
-                        //        ReadAllPlcValue.Value = ReadAllPlcValue.Value;
-                        //    }
-                        //});
+                                foreach (var item in ReadAllPlc)
+                                {
+                                    AbbRobotValueModels.Add(new AbbRobotValueModel() { Address = item.Address, Name = item.Name, Value = item.Value });
+                                }
+                            });
+                        }
+                        //异步切换UI线程防止出现跨线程异常
+                        Application.Current.Dispatcher.Invoke(() =>
+                        {
+                            //每次读取PLC数据后 更新界面数据
+                            foreach (var ReadAllPlcValue in AbbRobotValueModels)
+                            {
+                                ReadAllPlcValue.Name = ReadAllPlcValue.Name;
+                                ReadAllPlcValue.Address = ReadAllPlcValue.Address;
+                                ReadAllPlcValue.Value = ReadAllPlcValue.Value;
+                            }
+                        });
                     }
                     catch (Exception ex)
                     {

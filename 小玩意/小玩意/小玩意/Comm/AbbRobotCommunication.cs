@@ -3,7 +3,11 @@ using ABB.Robotics.Controllers.Discovery;
 using ABB.Robotics.Controllers.IOSystemDomain;
 using ABB.Robotics.Controllers.MotionDomain;
 using ABB.Robotics.Controllers.RapidDomain;
+using DocumentFormat.OpenXml.Wordprocessing;
+using System.Collections.ObjectModel;
 using System.Windows;
+using 小玩意.Model;
+using 小玩意.ViewModel;
 
 namespace 小玩意
 {
@@ -47,11 +51,11 @@ namespace 小玩意
         public static ABB.Robotics.Controllers.RapidDomain.Task? tRob1;//
         public static List<ABB.Robotics.Controllers.RapidDomain.Task>? TRobt = [];
         /// <summary>
-        /// GetABBRobot方法扫描到的机器人对象 此对象仅为  GetAllAbbRobotDataValue 方法使用
+        /// GetABBRobot方法扫描到的机器人对象 
         /// </summary>
         private Controller? controller;
         /// <summary>
-        ///  所有扫描到的机器人对象
+        ///  所有扫描到的机器人对象 此对象仅为  GetAllAbbRobotDataValue 方法使用
         /// </summary>
         private List<Controller>? listcontroller = new List<Controller>();
         /// <summary>
@@ -80,10 +84,10 @@ namespace 小玩意
         /// </summary>
         /// <param name="index">选择要链接的机器人</param>
         /// <returns></returns>
-        public bool ConnRobot(int index = 0)
+        public bool ConnRobot(string name )
         {
 
-            controller = Controller.Connect(controllerInfo[index], ConnectionType.Standalone, false);
+            controller = Controller.Connect(controllerInfo.FirstOrDefault(o=>o.Name==name), ConnectionType.Standalone, false);
             if (controller != null)
             {
                 if (controller.Connected == true)
@@ -206,7 +210,7 @@ namespace 小玩意
         /// <param name="programName">目标程序</param>
         /// <param name="dataName">数据名称</param>
         /// <returns></returns>
-        public object ReadAbbDataNum(string abbName, string programName, string dataName, object value)
+        public object ReadAbbDataNum(string abbName, string programName, string dataName)
         {
 
             try
@@ -460,14 +464,34 @@ namespace 小玩意
         /// <summary>
         /// 获取已知所有数据
         /// </summary>
-        /// <param name="name"></param>
-        public void GetAllAbbRobotDataValue(Tuple<string, string, string, string> RobotDataValue, int Value)
+        /// <param name="RobotDataValue">机器人名称 数据名称 数据类型 数据所在程序名称  </param>
+        public ObservableCollection<AbbRobotValueModel> GetAllAbbRobotDataValue(Tuple<string, string, string, string> RobotDataValue)
         {
             //获取时使用
-            controller = listcontroller.FirstOrDefault(o => o.Name == RobotDataValue.Item1);
-            ReadAbbDataNum(RobotDataValue.Item1, RobotDataValue.Item2, RobotDataValue.Item3, Value);
+            var Abbcontroller = listcontroller.FirstOrDefault(o => o.Name == RobotDataValue.Item1);
 
+            try
+            {
+                if (Abbcontroller != null)
+                {
+                    if (Abbcontroller.IsMaster == false) ErrorViewModel.Errornotice("ABB主机请求失败,请先连接机器人再读取数据", true, 2);
+                    RapidData rd = Abbcontroller.Rapid.GetRapidData(RobotDataValue.Item1, RobotDataValue.Item4, RobotDataValue.Item2);
+                    var obj = rd.Value.ToString().Trim();
 
+                    return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = obj, Address = Abbcontroller.IPAddress.ToString() } };
+                }
+                else
+                {
+                    return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = "未连接到机器人", Address = Abbcontroller.IPAddress.ToString() } };
+
+                }
+            }
+            catch (Exception ex)
+            {
+                //TODO: 此处需要增加日志
+
+                return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = "未连接到机器人", Address = Abbcontroller.IPAddress.ToString() } };
+            }
         }
     }
 }
