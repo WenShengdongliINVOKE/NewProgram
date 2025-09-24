@@ -3,7 +3,7 @@ using ABB.Robotics.Controllers.Discovery;
 using ABB.Robotics.Controllers.IOSystemDomain;
 using ABB.Robotics.Controllers.MotionDomain;
 using ABB.Robotics.Controllers.RapidDomain;
-using DocumentFormat.OpenXml.Wordprocessing;
+using NLog;
 using System.Collections.ObjectModel;
 using System.Windows;
 using 小玩意.Model;
@@ -47,7 +47,10 @@ namespace 小玩意
         /// z坐标
         /// </summary>
         public double Z;
-
+        /// <summary>
+        /// 日志
+        /// </summary>
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         public static ABB.Robotics.Controllers.RapidDomain.Task? tRob1;//
         public static List<ABB.Robotics.Controllers.RapidDomain.Task>? TRobt = [];
         /// <summary>
@@ -84,16 +87,17 @@ namespace 小玩意
         /// </summary>
         /// <param name="index">选择要链接的机器人</param>
         /// <returns></returns>
-        public bool ConnRobot(string name )
+        public bool ConnRobot(string name)
         {
 
-            controller = Controller.Connect(controllerInfo.FirstOrDefault(o=>o.Name==name), ConnectionType.Standalone, false);
+            controller = Controller.Connect(controllerInfo.FirstOrDefault(o => o.Name == name), ConnectionType.Standalone, false);
             if (controller != null)
             {
                 if (controller.Connected == true)
                 {
                     controller.Logon(UserInfo.DefaultUser);
                     tRob1 = controller.Rapid.GetTask("T_ROB1");
+                    logger.Info($"机器人:{controller.Name} 连接成功");
                     return true;
                 }
                 return false;
@@ -124,6 +128,7 @@ namespace 小玩意
                         {
                             item.Logon(UserInfo.DefaultUser);
                             TRobt.Add(tRob1 = item.Rapid.GetTask("T_ROB1"));
+                            logger.Info($"机器人:{item.Name} 连接成功");
                             //continue;
                         }
                         //return false;
@@ -131,6 +136,7 @@ namespace 小玩意
                 }
                 catch (Exception ex)
                 {
+                    logger.Error(ex, $"连接机器人失败");
                     //TODO: 此处需要增加日志
                     //throw;
                 }
@@ -178,6 +184,7 @@ namespace 小玩意
                     this.IpAddress = controller.IPAddress.ToString();
                     this.Id = +1;
                     abbRobotCommunications.Add(this);
+                    logger.Info($"扫描到机器人:{controller.Name} \n IP地址:{controller.IPAddress.ToString()} \n 系统名称:{controller.SystemName} \n 系统版本:{controller.Version.ToString()} \n 是否为虚拟机:{controller.IsVirtual}");
 
                 }
                 return Tuple.Create(abbRobotCommunications, controllers);
@@ -188,16 +195,23 @@ namespace 小玩意
             catch (System.Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                ErrorBox.Show($"未扫描到机器人 错误信息：{ex.ToString()}", true);
+                logger.Info($"未扫描到机器人 错误信息：{ex.ToString()}");
+                //ErrorBox.Show($"未扫描到机器人 错误信息：{ex.ToString()}", true);
                 return Tuple.Create(new List<AbbRobotCommunication>(), new ControllerInfo[scanner.GetControllers(NetworkScannerSearchCriterias.Virtual).Length]);
 
             }
 
 
         }
-
-
+        /// <summary>
+        /// 让当前选择的这个机器人对象生效 选择哪个机器人 就使用哪个机器人
+        /// </summary>
+        /// <param name="name">机器人名称</param>
+        public void SeclcetRobot(string name) 
+        {
+            controller =  listcontroller.FirstOrDefault(o => o.Name == name);
+            
+        }
 
 
         //
@@ -215,16 +229,17 @@ namespace 小玩意
 
             try
             {
-                if (this.controller.IsMaster == false) MessageBox.Show("ABB主机请求失败,请先连接机器人再读取数据");
+                if (this.controller.IsMaster == false) ErrorViewModel.Errornotice("ABB主机请求失败,机器人连接异常", true, 1);
                 RapidData rd = controller.Rapid.GetRapidData(abbName, programName, dataName);
                 var obj = rd.Value.ToString().Trim();
+                logger.Info($"读取数据成功  机器人:{abbName}  程序:{programName}  数据名称:{dataName}  数据值:{obj}");
                 return obj;
             }
             catch (Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                ErrorBox.Show(ex.ToString(), true);
+                logger.Error(ex, $"读取数据失败");
+                //ErrorBox.Show(ex.ToString(), true);
                 return "未连接到机器人";
             }
 
@@ -244,11 +259,12 @@ namespace 小玩意
 
             try
             {
-                if (controller.IsMaster == false) MessageBox.Show("ABB主机请求失败,请先连接机器人再读取数据");
+                if (controller.IsMaster == false) ErrorViewModel.Errornotice("ABB主机请求失败,机器人连接异常", true, 1);
                 RapidData rd = controller.Rapid.GetRapidData(abbName, programName, dataName);
                 if (rd != null)
                 {
                     var array = (ArrayData)rd.Value;
+                    logger.Info($"读取数组成功  机器人:{abbName}  程序:{programName}  数据名称:{dataName}  数组值:{array.ToString()}");
                     return array;
                 }
                 return null;
@@ -256,8 +272,8 @@ namespace 小玩意
             catch (Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                MessageBox.Show(ex.ToString());
+                logger.Error(ex, $"读取数组失败");
+                //MessageBox.Show(ex.ToString());
                 return null;
             }
 
@@ -280,53 +296,65 @@ namespace 小玩意
                 {
                     using (var m = Mastership.Request(controller))
                     {
-                        if (controller.IsMaster == false) MessageBox.Show("ABB主机请求失败,请先连接机器人再读取数据");
+                        if (controller.IsMaster == false) ErrorViewModel.Errornotice("ABB主机请求失败,请先连接机器人再读取数据",true,1);
                         RapidData rd = controller.Rapid.GetRapidData(abbName, programName, dataName);
                         RobTarget rb = (RobTarget)rd.Value;
                         this.X = rb.Trans.X;
                         this.Y = rb.Trans.Y;
                         this.Z = rb.Trans.Z;
+                        //logger.Info()
                     }
                 }
                 catch (Exception ex)
                 {
                     //TODO: 此处需要增加日志
-
-                    MessageBox.Show(ex.ToString());
+                    logger.Error(ex, $"读取坐标失败");
+                    //MessageBox.Show(ex.ToString());
                 }
             }
             return this;
         }
 
 
-
         /// <summary>
         /// 读取Bool量
         /// </summary>
-        /// <param name="controller">目标对象</param>
-        /// <param name="rapidBool">写入的值</param>
+        /// <param name="str">地址</param>
         /// <returns></returns>
         public Signal ReadAbbBool(string str)
         {
+            try
+            {
 
-            Signal dopick = controller.IOSystem.GetSignal(str);
+                Signal dopick = controller.IOSystem.GetSignal(str);
+                if (dopick != null)
+                {
+                    logger.Info($"读取Bool量成功  地址:{str}  数据值:{dopick.ToString()}");
+                    return dopick;
+                }
+                logger.Error($"读取Bool量失败  地址:{str} ");
+                return dopick;
 
-            return dopick;
+            }
+            catch (Exception ex)
+            {
 
+                logger.Error("读取时发生异常" + ex, $"读取Bool量失败  地址:{str} ");
+                return null;
+            }
         }
         /// <summary>
-        /// 写入bool量
+        /// 写入Bool量
         /// </summary>
-        /// <param name="controller"></param>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        public void WriteAbbBools(string str, string str1)
+        /// <param name="str">地址</param>
+        /// <param name="str1"></param>
+        public void WriteAbbBools(string address, string value)
         {
             try
             {
-                Signal signal = controller.IOSystem.GetSignal(str);
+                Signal signal = controller.IOSystem.GetSignal(address);
                 DigitalSignal sig = (DigitalSignal)signal;
-                if (str1 == "1")
+                if (value == "1")
                 {
                     sig.Set();
                 }
@@ -334,15 +362,16 @@ namespace 小玩意
                 {
                     sig.Reset();
                 }
-                Signal signal2 = controller.IOSystem.GetSignal(str);
+                Signal signal2 = controller.IOSystem.GetSignal(address);
                 GroupSignal group = (GroupSignal)signal2;
-                group.Value = Convert.ToSingle(str1);
+                group.Value = Convert.ToSingle(value);
+                logger.Info($"写入Bool量成功  地址:{address}  数据值:{value}");
             }
             catch (Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                MessageBox.Show(ex.ToString());
+                logger.Error(ex, $"写入Bool量失败  地址:{address}  数据值:{value}");
+                //MessageBox.Show(ex.ToString());
             }
         }
 
@@ -361,15 +390,16 @@ namespace 小玩意
                     Num num = (Num)Rd.Value;
                     num.FillFromString2(str);
                     Rd.Value = num;
-                    MessageBox.Show($"数据{num}写入成功");
+                    logger.Info(($"数据{str}写入成功  机器人:{robotName}  程序:{programName}  数据名称:{dataName}  数据值:{str}"));
+                    //MessageBox.Show($"数据{num}写入成功");
                 }
                 ;
             }
             catch (Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                MessageBox.Show(ex.ToString());
+                logger.Error(ex, $"数据{str}写入失败  机器人:{robotName}  程序:{programName}  数据名称:{dataName}  数据值:{str}");
+                //MessageBox.Show(ex.ToString());
             }
         }
         /// <summary>
@@ -390,16 +420,18 @@ namespace 小玩意
                     {
                         ArrayData array = (ArrayData)Rd.Value;
                         array.FillFromString(str);
+                        logger.Info(($"数组数据{str}写入成功  机器人:{robotName}  程序:{programName}  数据名称:{dataName}  数据值:{str}"));
                     }
-                    MessageBox.Show("数值已修改");
+                    
+                    //MessageBox.Show("数值已修改");
                 }
                 ;
             }
             catch (Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                MessageBox.Show(ex.ToString());
+                logger.Error(ex, $"数组数据{str}写入失败  机器人:{robotName}  程序:{programName}  数据名称:{dataName}  数据值:{str}");
+                //MessageBox.Show(ex.ToString());
             }
         }
         /// <summary>
@@ -421,16 +453,17 @@ namespace 小玩意
                     {
                         Num num = (Num)Rd.ReadItem(number);
                         num.Value = Convert.ToInt32(str);
+                        logger.Info(($"数组数据{str}写入成功  机器人:{robotName}  程序:{programName}  数据名称:{dataName}  数据值:{str}"));
                     }
-                    MessageBox.Show("数值已修改");
+                    //MessageBox.Show("数值已修改");
                 }
                 ;
             }
             catch (Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                MessageBox.Show(ex.ToString());
+                logger.Error(ex, $"数组数据{str}写入失败  机器人:{robotName}  程序:{programName}  数据名称:{dataName}  数据值:{str}");
+                //MessageBox.Show(ex.ToString());
             }
         }
         /// <summary>
@@ -438,8 +471,6 @@ namespace 小玩意
         /// </summary>
         public void GetRobotRealWorldTimeGestures()
         {
-
-
             RobTarget robTarget = controller.MotionSystem.ActiveMechanicalUnit.GetPosition(CoordinateSystemType.World);
 
             this.X = robTarget.Trans.X;
@@ -465,32 +496,46 @@ namespace 小玩意
         /// 获取已知所有数据
         /// </summary>
         /// <param name="RobotDataValue">机器人名称 数据名称 数据类型 数据所在程序名称  </param>
-        public ObservableCollection<AbbRobotValueModel> GetAllAbbRobotDataValue(Tuple<string, string, string, string> RobotDataValue)
+        public ObservableCollection<AbbRobotValueModel> GetAllAbbRobotDataValue(List<Tuple<string, string, string, string>> RobotDataValue)
         {
             //获取时使用
-            var Abbcontroller = listcontroller.FirstOrDefault(o => o.Name == RobotDataValue.Item1);
-
+            var Abbcontroller = listcontroller.FirstOrDefault(o => o.Name == RobotDataValue[0].Item1);
+            List< AbbRobotValueModel> AbbRobotValueModels = new List<AbbRobotValueModel> ();
+            ObservableCollection<AbbRobotValueModel> abbRobotValueModels = new  ObservableCollection<AbbRobotValueModel>();
             try
             {
                 if (Abbcontroller != null)
                 {
                     if (Abbcontroller.IsMaster == false) ErrorViewModel.Errornotice("ABB主机请求失败,请先连接机器人再读取数据", true, 2);
-                    RapidData rd = Abbcontroller.Rapid.GetRapidData(RobotDataValue.Item1, RobotDataValue.Item4, RobotDataValue.Item2);
-                    var obj = rd.Value.ToString().Trim();
 
-                    return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = obj, Address = Abbcontroller.IPAddress.ToString() } };
+                    foreach (var item in RobotDataValue)
+                    {
+                       
+                            RapidData rd = Abbcontroller.Rapid.GetRapidData(item.Item1, item.Item4, item.Item2);
+                            var obj = rd.Value.ToString().Trim();
+                            AbbRobotValueModels.Add(new AbbRobotValueModel() { Name = item.Item1,Address = Abbcontroller.IPAddress.ToString(),Value = obj });
+                            //ErrorViewModel.Errornotice("机器人名称不匹配,请检查", true, 1);
+                            //return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = item.Item1, Value = "机器人名称不匹配,请检查", Address = Abbcontroller.IPAddress.ToString() } };
+
+                    }
+                    foreach (var item in AbbRobotValueModels)
+                    {
+                        abbRobotValueModels.Add(item);
+                    }
+                    return abbRobotValueModels; // ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = obj, Address = Abbcontroller.IPAddress.ToString() } };
                 }
                 else
                 {
-                    return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = "未连接到机器人", Address = Abbcontroller.IPAddress.ToString() } };
+                    logger.Error($"读取数据失败  机器人:{RobotDataValue[0].Item1}  程序:{RobotDataValue[0].Item4}  数据名称:{RobotDataValue[0].Item2}  数据值:未连接到机器人");
+                    return abbRobotValueModels; //new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = "未连接到机器人", Address = Abbcontroller.IPAddress.ToString() } };
 
                 }
             }
             catch (Exception ex)
             {
                 //TODO: 此处需要增加日志
-
-                return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue.Item1, Value = "未连接到机器人", Address = Abbcontroller.IPAddress.ToString() } };
+                logger.Error(ex, $"读取数据失败");
+                return new ObservableCollection<AbbRobotValueModel>() { new AbbRobotValueModel() { Name = RobotDataValue[0].Item1, Value = "未连接到机器人", Address = Abbcontroller.IPAddress.ToString() } };
             }
         }
     }

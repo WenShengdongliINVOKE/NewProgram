@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using NLog;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -19,7 +20,10 @@ namespace 小玩意
         //private static Mutex mutex;
         private readonly Dictionary<string, Page> _pageCache = new Dictionary<string, Page>();
 
-       public static ReadIniModel readIniModel = new ReadIniModel();
+
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
+        public static ReadIniModel readIniModel = new ReadIniModel();
 
         public MainWindow()
         {
@@ -30,8 +34,8 @@ namespace 小玩意
             this.MaxHeight = SystemParameters.PrimaryScreenHeight;
             // 默认导航到首页
             NavigateToPage("ConnectDevice.xaml", null);
-
-           readIniModel = ReadExecl.ReadIniFile();
+            logger.Info("程序启动成功！");
+            //readIniModel = ReadExecl.ReadIniFile();
 
         }
         /// <summary>
@@ -46,6 +50,7 @@ namespace 小玩意
             {
                 string pageName = $"{button.CommandParameter.ToString()}.xaml";
                 NavigateToPage(pageName, button);
+                logger.Info($"导航到页面: {pageName}");
             }
             else
             {
@@ -77,6 +82,7 @@ namespace 小玩意
                 }
                 catch (Exception ex)
                 {
+                    logger.Error(ex, $"加载页面失败: {pageName}");
                     ErrorViewModel.Errornotice($"页面加载失败: {ex.Message}", true, 1);
                     return;
                 }

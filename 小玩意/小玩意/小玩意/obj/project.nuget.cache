@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dJd0QFGRL3M=",
+  "dgSpecHash": "FY3nEH+Wnh8=",
   "success": true,
   "projectFilePath": "C:\\Users\\25062\\Desktop\\New\\小玩意\\小玩意\\小玩意\\小玩意.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\25062\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
     "C:\\Users\\25062\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
     "C:\\Users\\25062\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\25062\\.nuget\\packages\\nlog\\6.0.4\\nlog.6.0.4.nupkg.sha512",
     "C:\\Users\\25062\\.nuget\\packages\\npoi\\2.7.4\\npoi.2.7.4.nupkg.sha512",
     "C:\\Users\\25062\\.nuget\\packages\\rbush.signed\\4.0.0\\rbush.signed.4.0.0.nupkg.sha512",
     "C:\\Users\\25062\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\6.0.0\\runtime.linux-arm.runtime.native.system.io.ports.6.0.0.nupkg.sha512",

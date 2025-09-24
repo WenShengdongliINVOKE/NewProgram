@@ -1,8 +1,6 @@
-﻿using 小玩意.Model;
-
-namespace 小玩意.Comm
+﻿namespace 小玩意.Comm
 {
-     public interface IPlccommiunctionCommand
+    public interface IPlccommiunctionCommand
     {
         public bool WritePlcInt32(string DBaddress, string value);
         public bool WritePlcInt16(string DBaddress, string value);

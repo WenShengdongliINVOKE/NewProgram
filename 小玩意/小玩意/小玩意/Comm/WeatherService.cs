@@ -1,16 +1,13 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using NLog;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using 小玩意.Model;
 
 namespace 小玩意.Comm
 {
     class WeatherService
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly string _apiKey;
         private readonly HttpClient _httpClient;
 

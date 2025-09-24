@@ -1,4 +1,5 @@
-﻿using System.Net.Sockets;
+﻿using NLog;
+using System.Net.Sockets;
 using System.Text;
 using 小玩意.ViewModel;
 
@@ -6,6 +7,7 @@ namespace 小玩意.Comm
 {
     public class TcpClient : IDisposable
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly System.Net.Sockets.TcpClient _client = new();
         private NetworkStream? _stream;
         private bool _isConnected;

@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using NLog;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using 小玩意.Comm;
@@ -21,8 +21,10 @@ namespace 小玩意.ViewModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         public ICommand ConnCommand { get; }
-        public ICommand ItemSelectCommand { get; }
+      
 
+
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         /// <summary>
         /// 当前选中设备的索引
         /// </summary>
@@ -73,7 +75,7 @@ namespace 小玩意.ViewModel
         /// <summary>
         /// 这里是一个二维集合 外层List代表PLC设备数量 内层List代表每个PLC设备下的所有的地址的 名称  数据类型 地址 当前值
         /// </summary>
-        List<List<Tuple<string, Siemens.Type, string, string>>> ValuePairs = new List<List<Tuple<string, Siemens.Type, string, string>>>();
+        List<List<Tuple<string, Siemens.Type, string>>> ValuePairs = new List<List<Tuple<string, Siemens.Type, string>>>();
         /// <summary>
         /// 当前选中PLC的索引值
         /// </summary>
@@ -83,108 +85,62 @@ namespace 小玩意.ViewModel
 
         private static readonly object _obj = new object();
 
+
+
         public S7CommViweModel()
         {
             ConnCommand = new RelayCommand(S7ConnCommand);
-            ItemSelectCommand = new RelayCommand(GetSelectedSide);
-            (S7Models, MyDevice) = InitDevice.GetPlcDevice();
-            //ErrorViewModel.Errornotice("1",false,1);          
-              S7ConnCommand();
+          
+            GetPlcDevice();
             Thread.Sleep(100);
             GetSelectPLCAllData();
-
-        }
-        public static S7CommViweModel GetS7CommViweModel()
-        {
-
-            lock (_obj)
-            {
-
-
-                if (s7CommViweModel == null)
-                {
-                    s7CommViweModel = new S7CommViweModel();
-                    return s7CommViweModel;
-                }
-                else
-                {
-                    return s7CommViweModel;
-                }
-            }
-
-
-                //return this;
-        }
            
 
-
+        }
+        /// <summary>
+        /// 获取PLC设备信息 并加载到界面
+        /// </summary>
+        private void GetPlcDevice()
+        {
+            //MyDevice = InitDevice.InterfaceModels;
+            MyDevice = new ObservableCollection<S7Model>();
+            foreach (var item in InitDevice.DeviceModels)
+            {
+                MyDevice.Add(new S7Model() { S7Address = item.S7Address, S7Rack = item.S7Rack, S7Slot = item.S7Slot, CpuType = item.CpuType });
+            }
+            ValuePairs = InitDevice.SiemensValuePairs;
+        }
 
 
         /// <summary>
         /// 与PLC建立通讯
         /// </summary>
-        private void  S7ConnCommand()
+        private void S7ConnCommand()
         {
-             Task.Factory.StartNew(async () =>
-            {
+            Task.Factory.StartNew(async () =>
+           {
 
-                if (S7Models != null)
-                {
-                    foreach (var item in S7Models)
-                    {
-                        //address = item.S7Address;
-                        //rack = Convert.ToInt16(item.S7Lock);
-                        //slot = Convert.ToInt16(item.S7Slot);
+               if (S7Models != null)
+               {
+                   foreach (var item in S7Models)
+                   {
+                       _siemens.Add(new Siemens(item.CpuType, item.S7Address, item.S7Rack, item.S7Slot) { _cpuType = item.CpuType, _address = item.S7Address, _rack = item.S7Rack, _slot = item.S7Slot });
+                   }
 
-                        _siemens.Add(new Siemens(item.CpuType, item.S7Address, item.S7Rack, item.S7Slot) { _cpuType = item.CpuType, _address = item.S7Address, _rack = item.S7Rack, _slot = item.S7Slot });
-                        _siemens.Add(new Siemens(item.CpuType, item.S7Address, item.S7Rack, item.S7Slot));
-                        _siemens.Add(new Siemens(item.CpuType, item.S7Address, item.S7Rack, item.S7Slot));
-                        _siemens.Add(new Siemens(item.CpuType, item.S7Address, item.S7Rack, item.S7Slot));
-                        //Siemens.WritePlcInt32(item.S7Address, "22");
-                        //Siemens.ReadPlc(11, "");
-                        //List<string> strings = new List<string>();
-                        //List<string> strings1 = new List<string>();
-                        //List<string> strings2 = new List<string>();
-                        //List<string> strings3 = new List<string>();
-                        //strings.Add("1");
-                        //strings.Add("8");
-                        //strings1.Add("3");
-                        //strings1.Add("47");
-                        //strings2.Add("52");
-                        //strings2.Add("6");
-                        //strings3.Add("72");
-                        //strings3.Add("7");
-
-                    }
-
-
-                    ValuePairs.Add(new List<Tuple<string, Siemens.Type, string, string>>() { new Tuple<string, Siemens.Type, string, string>("192.168.0.11", Siemens.Type.Bool, "名称1", "DB1") });
-                    ValuePairs.Add(new List<Tuple<string, Siemens.Type, string, string>>() { new Tuple<string, Siemens.Type, string, string>("192.168.0.12", Siemens.Type.Bool, "名称2", "DB2") });
-                    ValuePairs.Add(new List<Tuple<string, Siemens.Type, string, string>>() { new Tuple<string, Siemens.Type, string, string>("192.168.0.13", Siemens.Type.Bool, "名称3", "DB3") });
-                    ValuePairs.Add(new List<Tuple<string, Siemens.Type, string, string>>() { new Tuple<string, Siemens.Type, string, string>("192.168.0.14", Siemens.Type.Bool, "名称4", "DB4") });
-                    //ValuePairs.Add(new Tuple<Siemens.Type, string, string>(Siemens.Type.Bool, "名称2", "DB12"));
-                    //ValuePairs.Add(new Tuple<Siemens.Type, string, string>(Siemens.Type.Bool, "名称3", "DB13"));
-                    //ValuePairs.Add(new Tuple<Siemens.Type, string, string>(Siemens.Type.Bool, "名称4", "DB14"));
-                    //ValuePairs.Add(new Tuple<Siemens.Type, string, string>(Siemens.Type.Bool, "名称5", "DB15"));
-                    //ValuePairs.Add(new Tuple<Siemens.Type, string, string>(Siemens.Type.Bool, "名称6", "DB16"));
-                    //ValuePairs.Add(new Tuple<Siemens.Type, string, string>(Siemens.Type.Bool, "名称7", "DB17"));
-
-
-                    MyDataValue = new ObservableCollection<S7ValueModel>();
-
-                }
-                else
-                {
-                    ErrorViewModel.Errornotice("PLC地址不能为空！", true, 1);
-                }
-            }
-            );
+               }
+               else
+               {
+                   logger.Info("初始化PLC出错！请检查配置清单！");
+                   ErrorViewModel.Errornotice("PLC地址不能为空！", true, 1);
+               }
+           }
+           );
 
 
 
         }
         bool Tmp = true;
-        string Tmpnums =string.Empty;
+        string Tmpnums = string.Empty;
         /// <summary>
         /// 向界面加载当前选中PLC的所有数据 默认优先加载第一个
         /// </summary>
@@ -197,60 +153,56 @@ namespace 小玩意.ViewModel
             {
                 try
                 {
-                    // var ss = ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address));
+                   
                     //根据当前选择的PLC对象去找它的实例 找到此实例之后 调用它自己的 GetAllPlcDataAddress 方法
-                    //TODO 这里把 Siemens 类型改为它的接口 这样继承的子类都可以使用后面的正则表达式
-                    var ReadAllPlc = await _siemens.FirstOrDefault(o => o._address == SelectedSide.S7Address).GetAllPlcDataAddress(ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address)));
-                    if ((Tmp) || Tmpnums != SelectedSide.S7Address)
+                 
+                    if (ValuePairs.Any() && ConnectDeviceViweModel._siemens.Any())
                     {
-                        Tmp = false;
-                        Tmpnums = SelectedSide.S7Address;
+                        var ReadAllPlc = await ConnectDeviceViweModel._siemens.FirstOrDefault(o => o._address == SelectedSide.S7Address).GetAllPlcDataAddress(ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address)));
+                       
+                        if ((Tmp) || Tmpnums != SelectedSide.S7Address)
+                        {
+                            Tmp = false;
+                            Tmpnums = SelectedSide.S7Address;
+                            //异步切换UI线程防止出现跨线程异常
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                if (MyDataValue.Any())
+                                {
+                                    MyDataValue.Clear();
+                                }
+
+                                foreach (var item in ReadAllPlc)
+                                {
+                                    MyDataValue.Add(new S7ValueModel() { Address = item.Address, Name = item.Name, Value = item.Value });
+                                }
+                            });
+                        }
+
                         //异步切换UI线程防止出现跨线程异常
                         Application.Current.Dispatcher.Invoke(() =>
                         {
-                            if (MyDataValue.Any())
+                            //每次读取PLC数据后 更新界面数据
+                            foreach (var ReadAllPlcValue in MyDataValue)
                             {
-                                MyDataValue.Clear();
-                            }
-
-                            foreach (var item in ReadAllPlc)
-                            {
-                                MyDataValue.Add(new S7ValueModel() { Address = item.Address, Name = item.Name, Value = item.Value });
+                                ReadAllPlcValue.Name = ReadAllPlcValue.Name;
+                                ReadAllPlcValue.Address = ReadAllPlcValue.Address;
+                                ReadAllPlcValue.Value = ReadAllPlcValue.Value;
                             }
                         });
                     }
-                    //异步切换UI线程防止出现跨线程异常
-                    Application.Current.Dispatcher.Invoke(() =>
-                    {
-                        //每次读取PLC数据后 更新界面数据
-                        foreach (var ReadAllPlcValue in MyDataValue)
-                        {
-                            ReadAllPlcValue.Name = ReadAllPlcValue.Name;
-                            ReadAllPlcValue.Address = ReadAllPlcValue.Address;
-                            ReadAllPlcValue.Value = ReadAllPlcValue.Value;
-                        }
-                    });
                 }
                 catch (Exception ex)
                 {
-
-                    ErrorViewModel.Errornotice(ex.Message, true, 1);
+                    logger.Error(ex, "读取PLC数据出错！");
+                    //ErrorViewModel.Errornotice(ex.Message, true, 1);
                 }
             }
 
 
         });
         }
-        /// <summary>
-        /// 获取当前选中PLC信息
-        /// </summary>
-        private void GetSelectedSide()
-        {
-            if (SelectedSide != null)
-            {
-                //MessageBox.Show(SelectedSide);
-            }
-        }
+       
 
     }
 }

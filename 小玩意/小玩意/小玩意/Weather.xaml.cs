@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using 小玩意.Comm;
@@ -37,7 +27,7 @@ namespace 小玩意
 
             _weatherInfo = new WeatherInfo();
             this.DataContext = _weatherInfo;
-            Button_Search_Click(null,null);
+            Button_Search_Click(null, null);
         }
 
 
@@ -67,7 +57,7 @@ namespace 小玩意
             }
             catch (Exception ex)
             {
-                ErrorViewModel.Errornotice($"❌ 获取天气失败：{ex.Message} 😅🙌 其实是没有钱去调用付费API啦。。。",false,2);
+                ErrorViewModel.Errornotice($"❌ 获取天气失败：{ex.Message} 😅🙌 其实是没有钱去调用付费API啦。。。", false, 2);
             }
         }
 

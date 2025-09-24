@@ -204,3 +204,4 @@ C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-window
 C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\System.IO.Packaging.dll
 C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\Weather.g.cs
 C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\obj\Debug\net8.0-windows\Weather.baml
+C:\Users\25062\Desktop\New\小玩意\小玩意\小玩意\bin\Debug\net8.0-windows\NLog.dll

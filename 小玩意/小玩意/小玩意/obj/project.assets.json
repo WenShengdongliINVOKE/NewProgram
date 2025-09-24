@@ -412,6 +412,19 @@
           }
         }
       },
+      "NLog/6.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NPOI/2.7.4": {
         "type": "package",
         "dependencies": {
@@ -1418,6 +1431,28 @@
         "packageIcon.png"
       ]
     },
+    "NLog/6.0.4": {
+      "sha512": "Xr+lIk1ZlTTFXEqnxQVLxrDqZlt2tm5X+/AhJbaY2emb/dVtGDiU5QuEtj3gHtwV/SWlP/rJ922I/BPuOJXlRw==",
+      "type": "package",
+      "path": "nlog/6.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/netstandard2.1/NLog.dll",
+        "lib/netstandard2.1/NLog.xml",
+        "nlog.6.0.4.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
     "NPOI/2.7.4": {
       "sha512": "1tCebTkr9qAfwiEa2ErXco2IT+D8MNmT9d4KFz9nWn3owkc5fAOsvxV8kq6y4531B4Z3gnInrvEdonwFyoRqPQ==",
       "type": "package",
@@ -2061,6 +2096,7 @@
       "CommunityToolkit.Mvvm >= 8.3.2",
       "EPPlus >= 7.7.0",
       "HslCommunication >= 12.5.1",
+      "NLog >= 6.0.4",
       "NPOI >= 2.7.4",
       "Newtonsoft.Json >= 13.0.4",
       "S7netplus >= 0.20.0",
@@ -2133,6 +2169,10 @@
           "HslCommunication": {
             "target": "Package",
             "version": "[12.5.1, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[6.0.4, )"
           },
           "NPOI": {
             "target": "Package",

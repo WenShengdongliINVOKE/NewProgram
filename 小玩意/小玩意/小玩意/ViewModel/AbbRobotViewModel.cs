@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using DocumentFormat.OpenXml.Drawing.Charts;
+using NLog;
+using NPOI.SS.Formula.Functions;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
@@ -10,6 +11,9 @@ namespace 小玩意.ViewModel
 {
     class AbbRobotViewModel : ObservableObject, INotifyPropertyChanged
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
+
+
         ObservableCollection<AbbRobotModel> _robotModels;
         public ObservableCollection<AbbRobotModel> RobotModels
         {
@@ -35,15 +39,17 @@ namespace 小玩意.ViewModel
         public AbbRobotModel SelectedSide
         {
             get => _selectedSide;
-            set {
+            set
+            {
                 SetProperty(ref _selectedSide, value);
                 OnPropertyChanged(nameof(SelectedSide));
             }
-        
-        }
 
+        }
+       
         AbbRobotCommunication abbRobotCommunication;
 
+        List< List<Tuple<string, string, string,string>>> ValuePairs = new List<List<Tuple<string, string, string, string>>>();
         public AbbRobotViewModel()
         {
 
@@ -54,22 +60,19 @@ namespace 小玩意.ViewModel
                 int i = 1;
                 foreach (var item in abbRobotCommunication.controllerInfo)
                 {
-                    RobotModels.Add(new AbbRobotModel() { Id = i++.ToString(), IPAddress = item.IPAddress.ToString(), Name = item.Name, IsVirtual = item.IsVirtual, SystemVersion = item.Version.ToString() });
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        RobotModels.Add(new AbbRobotModel() { Id = i++.ToString(), IPAddress = item.IPAddress.ToString(), Name = item.Name, IsVirtual = item.IsVirtual, SystemVersion = item.Version.ToString() });
+                    }
+                );
                 }
             }
             );
-
-            ReadExecl.ReadIniFile();
+           
+            GetSelectABBRobotAllData();
         }
 
-       
 
-        private void GetAbbRobotDataValue()
-        {
-
-
-
-        }
 
         bool Tmp = true;
         string Tmpnums = string.Empty;
@@ -85,37 +88,47 @@ namespace 小玩意.ViewModel
                 {
                     try
                     {
-                        //var ss = ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.S7Address));
-                        var ReadAllPlc = await abbRobotCommunication.GetAllAbbRobotDataValue() ;
-                        if ((Tmp) || Tmpnums != SelectedSide.Name)
+                        if (ValuePairs.Any())
                         {
-                            Tmp = false;
-                            Tmpnums = SelectedSide.Name;
+
+
+                            if (SelectedSide != null)
+                            {
+                                abbRobotCommunication.SeclcetRobot(SelectedSide.Name);
+                            }
+
+                            //var ss = ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.IPAddress));
+                            var ReadAllPlc = abbRobotCommunication.GetAllAbbRobotDataValue(ValuePairs.FirstOrDefault(o => o.All(o => o.Item1 == SelectedSide.Name)));
+                            //if ((Tmp) || Tmpnums != SelectedSide.Name)
+                            //{
+                            //    Tmp = false;
+                            //    Tmpnums = SelectedSide.Name;
+                            //    //异步切换UI线程防止出现跨线程异常
+                            //    Application.Current.Dispatcher.Invoke(() =>
+                            //    {
+                            //        if (AbbRobotValueModels.Any())
+                            //        {
+                            //            AbbRobotValueModels.Clear();
+                            //        }
+
+                            //        foreach (var item in ReadAllPlc)
+                            //        {
+                            //            AbbRobotValueModels.Add(new AbbRobotValueModel() { Address = item.Address, Name = item.Name, Value = item.Value });
+                            //        }
+                            //    });
+                            //}
                             //异步切换UI线程防止出现跨线程异常
                             Application.Current.Dispatcher.Invoke(() =>
                             {
-                                if (AbbRobotValueModels.Any())
+                                //每次读取机器人数据后 更新界面数据
+                                foreach (var ReadAllPlcValue in AbbRobotValueModels)
                                 {
-                                    AbbRobotValueModels.Clear();
-                                }
-
-                                foreach (var item in ReadAllPlc)
-                                {
-                                    AbbRobotValueModels.Add(new AbbRobotValueModel() { Address = item.Address, Name = item.Name, Value = item.Value });
+                                    ReadAllPlcValue.Name = ReadAllPlcValue.Name;
+                                    ReadAllPlcValue.Address = ReadAllPlcValue.Address;
+                                    ReadAllPlcValue.Value = ReadAllPlcValue.Value;
                                 }
                             });
                         }
-                        //异步切换UI线程防止出现跨线程异常
-                        Application.Current.Dispatcher.Invoke(() =>
-                        {
-                            //每次读取PLC数据后 更新界面数据
-                            foreach (var ReadAllPlcValue in AbbRobotValueModels)
-                            {
-                                ReadAllPlcValue.Name = ReadAllPlcValue.Name;
-                                ReadAllPlcValue.Address = ReadAllPlcValue.Address;
-                                ReadAllPlcValue.Value = ReadAllPlcValue.Value;
-                            }
-                        });
                     }
                     catch (Exception ex)
                     {

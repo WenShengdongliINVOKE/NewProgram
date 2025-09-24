@@ -271,6 +271,14 @@
           }
         }
       },
+      "NLog/6.0.4": {
+        "runtime": {
+          "lib/netstandard2.1/NLog.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.4.4534"
+          }
+        }
+      },
       "NPOI/2.7.4": {
         "dependencies": {
           "BouncyCastle.Cryptography": "2.4.0",
@@ -697,6 +705,13 @@
       "sha512": "sha512-pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
       "path": "newtonsoft.json/13.0.4",
       "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
+    },
+    "NLog/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xr+lIk1ZlTTFXEqnxQVLxrDqZlt2tm5X+/AhJbaY2emb/dVtGDiU5QuEtj3gHtwV/SWlP/rJ922I/BPuOJXlRw==",
+      "path": "nlog/6.0.4",
+      "hashPath": "nlog.6.0.4.nupkg.sha512"
     },
     "NPOI/2.7.4": {
       "type": "package",

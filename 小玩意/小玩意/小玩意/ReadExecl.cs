@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using NLog;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
@@ -14,6 +15,7 @@ namespace 小玩意
 {
     class ReadExecl
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         /// <summary>
         /// 读取配置文件
         /// </summary>
@@ -23,7 +25,7 @@ namespace 小玩意
             // EPPlus 5.0+ 需要设置 LicenseContext
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             var rowData = new ReadIniModel();
-            
+
             var filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             try
             {
@@ -54,13 +56,13 @@ namespace 小玩意
 
                     if (headers.Count == 0)
                     {
-                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。",true,1);
+                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
                         return null;
                     }
 
                     // 从第二行开始读取数据
                     var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
-                   
+
                     int rowIndex = 2; // 从 Excel 的第2行开始
                     foreach (var row in dataRows)
                     {
@@ -104,108 +106,108 @@ namespace 小玩意
                         rowIndex++;
                     }
                 }
-                //读取Sheet3的数据
-                using (var workbook = new XLWorkbook(filePath))
-                {
-                    // 获取第三个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
-                    var worksheet = workbook.Worksheet(3);
+                ////读取Sheet3的数据
+                //using (var workbook = new XLWorkbook(filePath))
+                //{
+                //    // 获取第三个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
+                //    var worksheet = workbook.Worksheet(3);
 
-                    // 读取第一行作为标题
-                    var headerRow = worksheet.Row(1); // 第1行是标题
-                    var headers = new List<string>();
+                //    // 读取第一行作为标题
+                //    var headerRow = worksheet.Row(1); // 第1行是标题
+                //    var headers = new List<string>();
 
-                    // 遍历第一行所有有内容的单元格，提取标题
-                    foreach (var cell in headerRow.CellsUsed())
-                    {
-                        headers.Add(cell.Value.ToString().Trim());
-                    }
+                //    // 遍历第一行所有有内容的单元格，提取标题
+                //    foreach (var cell in headerRow.CellsUsed())
+                //    {
+                //        headers.Add(cell.Value.ToString().Trim());
+                //    }
 
-                    if (headers.Count == 0)
-                    {
-                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
-                        return null;
-                    }
+                //    if (headers.Count == 0)
+                //    {
+                //        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
+                //        return null;
+                //    }
 
-                    // 从第二行开始读取数据
-                    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
+                //    // 从第二行开始读取数据
+                //    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
 
-                    int rowIndex = 2; // 从 Excel 的第2行开始
-                    foreach (var row in dataRows)
-                    {
-                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
-                        rowData.Sheet3.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
+                //    int rowIndex = 2; // 从 Excel 的第2行开始
+                //    foreach (var row in dataRows)
+                //    {
+                //        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                //        rowData.Sheet3.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
 
-                        rowIndex++;
-                    }
-                }
-                //读取Sheet4的数据
-                using (var workbook = new XLWorkbook(filePath))
-                {
-                    // 获取第四个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
-                    var worksheet = workbook.Worksheet(4);
+                //        rowIndex++;
+                //    }
+                //}
+                ////读取Sheet4的数据
+                //using (var workbook = new XLWorkbook(filePath))
+                //{
+                //    // 获取第四个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
+                //    var worksheet = workbook.Worksheet(4);
 
-                    // 读取第一行作为标题
-                    var headerRow = worksheet.Row(1); // 第1行是标题
-                    var headers = new List<string>();
+                //    // 读取第一行作为标题
+                //    var headerRow = worksheet.Row(1); // 第1行是标题
+                //    var headers = new List<string>();
 
-                    // 遍历第一行所有有内容的单元格，提取标题
-                    foreach (var cell in headerRow.CellsUsed())
-                    {
-                        headers.Add(cell.Value.ToString().Trim());
-                    }
+                //    // 遍历第一行所有有内容的单元格，提取标题
+                //    foreach (var cell in headerRow.CellsUsed())
+                //    {
+                //        headers.Add(cell.Value.ToString().Trim());
+                //    }
 
-                    if (headers.Count == 0)
-                    {
-                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
-                        return null;
-                    }
+                //    if (headers.Count == 0)
+                //    {
+                //        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
+                //        return null;
+                //    }
 
-                    // 从第二行开始读取数据
-                    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
+                //    // 从第二行开始读取数据
+                //    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
 
-                    int rowIndex = 2; // 从 Excel 的第2行开始
-                    foreach (var row in dataRows)
-                    {
-                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
-                        rowData.Sheet4.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
+                //    int rowIndex = 2; // 从 Excel 的第2行开始
+                //    foreach (var row in dataRows)
+                //    {
+                //        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                //        rowData.Sheet4.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
 
-                        rowIndex++;
-                    }
-                }
-                //读取Sheet5的数据
-                using (var workbook = new XLWorkbook(filePath))
-                {
-                    // 获取第五个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
-                    var worksheet = workbook.Worksheet(5);
+                //        rowIndex++;
+                //    }
+                //}
+                ////读取Sheet5的数据
+                //using (var workbook = new XLWorkbook(filePath))
+                //{
+                //    // 获取第五个工作表（也可以按名称：workbook.Worksheet("Sheet1")）
+                //    var worksheet = workbook.Worksheet(5);
 
-                    // 读取第一行作为标题
-                    var headerRow = worksheet.Row(1); // 第1行是标题
-                    var headers = new List<string>();
+                //    // 读取第一行作为标题
+                //    var headerRow = worksheet.Row(1); // 第1行是标题
+                //    var headers = new List<string>();
 
-                    // 遍历第一行所有有内容的单元格，提取标题
-                    foreach (var cell in headerRow.CellsUsed())
-                    {
-                        headers.Add(cell.Value.ToString().Trim());
-                    }
+                //    // 遍历第一行所有有内容的单元格，提取标题
+                //    foreach (var cell in headerRow.CellsUsed())
+                //    {
+                //        headers.Add(cell.Value.ToString().Trim());
+                //    }
 
-                    if (headers.Count == 0)
-                    {
-                        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
-                        return null;
-                    }
+                //    if (headers.Count == 0)
+                //    {
+                //        ErrorViewModel.Errornotice("❌ 第一行（标题行）为空，无法解析列名。", true, 1);
+                //        return null;
+                //    }
 
-                    // 从第二行开始读取数据
-                    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
+                //    // 从第二行开始读取数据
+                //    var dataRows = worksheet.RowsUsed().Skip(1); // 跳过标题行
 
-                    int rowIndex = 2; // 从 Excel 的第2行开始
-                    foreach (var row in dataRows)
-                    {
-                        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
-                        rowData.Sheet5.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
+                //    int rowIndex = 2; // 从 Excel 的第2行开始
+                //    foreach (var row in dataRows)
+                //    {
+                //        //Console.WriteLine($"📌 第 {rowIndex} 行数据：");
+                //        rowData.Sheet5.Add(new Tuple<string, string, string, string, string>(row.Cell(1).IsEmpty() ? "" : row.Cell(1).Value.ToString().Trim(), row.Cell(2).IsEmpty() ? "" : row.Cell(2).Value.ToString().Trim(), row.Cell(3).IsEmpty() ? "" : row.Cell(3).Value.ToString().Trim(), row.Cell(4).IsEmpty() ? "" : row.Cell(4).Value.ToString().Trim(), row.Cell(5).IsEmpty() ? "" : row.Cell(5).Value.ToString().Trim()));
 
-                        rowIndex++;
-                    }
-                }
+                //        rowIndex++;
+                //   }
+                //}
 
                 return rowData;
             }

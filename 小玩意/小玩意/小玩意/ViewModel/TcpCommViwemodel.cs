@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using NLog;
 using System.Collections.ObjectModel;
 using 小玩意.Model;
 
@@ -7,6 +8,7 @@ namespace 小玩意.ViewModel
     public class TcpCommViwemodel : ObservableObject
     {
 
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private string _addressValue;
 
         public string AddressValue { get => _addressValue; set => SetProperty(ref _addressValue, value); }

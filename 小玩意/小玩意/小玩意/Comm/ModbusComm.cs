@@ -1,4 +1,5 @@
-﻿using System.IO.Ports;
+﻿using NLog;
+using System.IO.Ports;
 using 小玩意.ViewModel;
 
 namespace 小玩意.Comm
@@ -8,7 +9,7 @@ namespace 小玩意.Comm
     /// </summary>
     internal class ModbusComm : IDisposable
     {
-
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private int _baudRate;
 
         private string _portName;

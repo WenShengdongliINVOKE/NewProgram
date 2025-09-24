@@ -1,4 +1,5 @@
-﻿using S7.Net;
+﻿using NLog;
+using S7.Net;
 using System.Text;
 using System.Windows;
 using 小玩意.Model;
@@ -17,7 +18,7 @@ namespace 小玩意.Comm
             Real = 4,
 
         }
-
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         public bool iSconn;
         public CpuType _cpuType;
 
@@ -37,43 +38,43 @@ namespace 小玩意.Comm
         /// <param name="cpuType">CPU类型</param>
         /// <param name="address">地址</param>
         /// <param name="rack">机架号</param>
-        /// <param name="slot"></param>
+        /// <param name="slot"> </param>
         public Siemens(CpuType cpuType, string address, short rack, short slot)
         {
-            if (false)
+
+            try
             {
-                try
-                {
 
-                    this._cpuType = cpuType;
-                    this._address = address;
-                    this._rack = rack;
-                    this._slot = slot;
-                    this.value = "";
-                    this._plc = new Plc(this._cpuType, this._address, this._rack, this._slot);
-                    if (this._plc != null)
+                this._cpuType = cpuType;
+                this._address = address;
+                this._rack = rack;
+                this._slot = slot;
+                this.value = "";
+                this._plc = new Plc(this._cpuType, this._address, this._rack, this._slot);
+                if (this._plc != null)
+                {
+                    Application.Current.Dispatcher.Invoke(new Action(async () =>
                     {
-                        Application.Current.Dispatcher.Invoke(new Action(async () =>
+                        await this._plc.OpenAsync();
+                        if (this._plc.IsConnected)
                         {
-                            await this._plc.OpenAsync();
-                            if (this._plc.IsConnected)
-                            {
-                                this.iSconn = this._plc.IsConnected;
-                            }
-                            else
-                            {
-                                this.iSconn = this._plc.IsConnected;
-                            }
-                        }));
-                    }
-
+                            this.iSconn = this._plc.IsConnected;
+                        }
+                        else
+                        {
+                            this.iSconn = this._plc.IsConnected;
+                        }
+                    }));
                 }
-                catch (Exception ex)
-                {
 
-                    //TODO:需要添加日志
-                }
             }
+            catch (Exception ex)
+            {
+
+                logger.Error(ex.ToString()+"连接超时");
+                //TODO:需要添加日志
+            }
+
 
         }
         /// <summary>
@@ -175,27 +176,38 @@ namespace 小玩意.Comm
         /// <returns></returns>
         public T ReadPlc<T>(T type, string address)
         {
-            if (this._plc != null)
+            try
             {
 
-                if (!this.iSconn)
+
+                if (this._plc != null)
                 {
-                    //PLC未连接，正在尝试重连！
-                    this._plc.Open();
-                    T t = ReadPlc(type, address);
-                    return t;
+
+                    if (!this.iSconn)
+                    {
+                        //PLC未连接，正在尝试重连！
+                        this._plc.Open();
+                        T t = ReadPlc(type, address);
+                        return t;
+                    }
+
+                    T d = (T)this._plc.Read(address);
+                    return d;
                 }
+                else
+                {
+                    //TODO: 此处需要增加日志
 
-                T d = (T)this._plc.Read(address);
-                return d;
+                    //PLC未初始化!
+                    return default(T);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                //TODO: 此处需要增加日志
 
-                //PLC未初始化!
-                return default(T);
+                string s = ex.ToString(); ;
             }
+            return default(T);
         }
 
         /// <summary>
@@ -217,88 +229,64 @@ namespace 小玩意.Comm
         /// 获取当前PLC所有的地址数据   返回包含了 名称  地址 值  的 元组数组
         /// </summary>
         /// <param name="DataAddresss">Type是类型   List<Tuple<string,string>> 第一个string是变量名称，第二个是变量地址 </param>
-        public async Task<List<S7ValueModel>> GetAllPlcDataAddress(List<Tuple<string, Siemens.Type, string, string>> DataAddresss)
+        public async Task<List<S7ValueModel>> GetAllPlcDataAddress(List<Tuple<string, Siemens.Type, string>> DataAddresss)
         {
             /// <summary>
             /// 存储返回的数据  数据名称和DB地址还有数据值
             /// </summary>
             List<S7ValueModel> addrssList = new List<S7ValueModel>();
-            //这里按照数据类型去分类 把相同类型全都放到一个类型去做读取操作
-            //if (false)  //没有PLC实物 连接时  这里不执行读取PLC操作 这里考虑加锁？
-            //{
-                await Task.Factory.StartNew(() =>
+           
+           
+            await Task.Factory.StartNew(() =>
+            {
+                try
                 {
-                    try
+                    //这里按照数据类型去分类 把相同类型全都放到一个类型去做读取操作
+                    var Bool = DataAddresss.FindAll(o => o.Item2 == Type.Bool);
+                    var Int16 = DataAddresss.FindAll(o => o.Item2 == Type.Int16);
+                    var Int32 = DataAddresss.FindAll(o => o.Item2 == Type.Int32);
+                    var Real = DataAddresss.FindAll(o => o.Item2 == Type.Real);
+                    var String = DataAddresss.FindAll(o => o.Item2 == Type.String);
+                    foreach (var item in Bool)
                     {
-                        var Bool = DataAddresss.FindAll(o => o.Item2 == Type.Bool);
-                        var Int16 = DataAddresss.FindAll(o => o.Item2 == Type.Int16);
-                        var Int32 = DataAddresss.FindAll(o => o.Item2 == Type.Int32);
-                        var Real = DataAddresss.FindAll(o => o.Item2 == Type.Real);
-                        var String = DataAddresss.FindAll(o => o.Item2 == Type.String);
-                        foreach (var item in Bool)
-                        {
-                            var ReadValue = ReadPlc(true, item.Item3);
-                            addrssList.Add(new S7ValueModel() { Name = item.Item1.ToString(), Address = item.Item2.ToString(), Value = ReadValue.ToString() });
-                        }
-                        foreach (var item in Int16)
-                        {
-                            var ReadValue = ReadPlc(1, item.Item3);
-                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
-                        }
-                        foreach (var item in Int32)
-                        {
-                            var ReadValue = ReadPlc(1, item.Item3);
-                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
-
-                        }
-                        foreach (var item in Real)
-                        {
-                            var ReadValue = ReadPlc(1.1, item.Item3);
-                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
-                        }
-                        foreach (var item in String)
-                        {
-                            var ReadValue = ReadPlc("", item.Item3);
-                            //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
-                        }
+                        var ReadValue = ReadPlc(true, item.Item3);
+                        addrssList.Add(new S7ValueModel() { Name = item.Item1.ToString(), Address = item.Item2.ToString(), Value = ReadValue.ToString() });
+                    }
+                    foreach (var item in Int16)
+                    {
+                        var ReadValue = ReadPlc(1, item.Item3);
+                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
+                    }
+                    foreach (var item in Int32)
+                    {
+                        var ReadValue = ReadPlc(1, item.Item3);
+                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
 
                     }
-                    catch (Exception ex)
+                    foreach (var item in Real)
                     {
-                        //TODO: 此处需要增加日志
-
-                        ErrorViewModel.Errornotice($"读取数据失败！Siemens.cs{ex.ToString()}", true, 1);
-                        //throw;
+                        var ReadValue = ReadPlc(1.1, item.Item3);
+                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
                     }
+                    foreach (var item in String)
+                    {
+                        var ReadValue = ReadPlc("", item.Item3);
+                        //addrssList.Add(new Tuple<string, string, string>(item.Item1.ToString(), item.Item2.ToString(), ReadValue.ToString()));
+                    }
+
                 }
-                );
-            //}
-            return addrssList;
-            // 这里按上面分好的类型去读取PLC的所有地址数据 每一种类型按分类去读取 每次读取一个
-            // Task.Factory.StartNew(() =>
-            //{ 
-            //    int j = 0;
-            //    while (true)
-            //    {
-            //        //foreach (var item in addrssList.Keys)
-            //        //{
-            //        //    if (item==Type.Int32.ToString())
-            //        //    {
-            //        //        foreach (var item in collection)
-            //        //        {
+                catch (Exception ex)
+                {
+                    //TODO: 此处需要增加日志
+                      logger.Error(ex, "Siemens.cs读取PLC数据出错！");
+                    //ErrorViewModel.Errornotice($"读取数据失败！Siemens.cs{ex.ToString()}", true, 1);
 
-            //        //        }
-            //        //    }
-            //        //}
-            //        addrssList[DataAddresss[Type.Bool][j].Item2] = ReadPlc(true, addrssList[DataAddresss[Type.Bool][j].Item2]).ToString();
-            //        addrssList[DataAddresss[Type.Int16][j].Item2] = ReadPlc(1, addrssList[DataAddresss[Type.Bool][j].Item2]).ToString();
-            //        addrssList[DataAddresss[Type.Int32][j].Item2] = ReadPlc(10, addrssList[DataAddresss[Type.Bool][j].Item2]).ToString();
-            //        addrssList[DataAddresss[Type.String][j].Item2] = ReadPlc("", addrssList[DataAddresss[Type.Bool][j].Item2]).ToString();
-            //        addrssList[DataAddresss[Type.Real][j].Item2] = ReadPlc(1.1, addrssList[DataAddresss[Type.Bool][j].Item2]).ToString();
-            //        j++;
-            //        if (j == addrssList.Count) j = 0;
-            //    }
-            //});
+                }
+            }
+            );
+        
+            return addrssList;
+           
 
         }
     }
