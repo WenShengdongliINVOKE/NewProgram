@@ -16,7 +16,7 @@
     <Compile Update="ErrorBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="S7Communication.xaml.cs">
+    <Compile Update="Page1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TCP.xaml.cs">

@@ -7,7 +7,7 @@ namespace 小玩意.Comm
     /// <summary>
     /// ModbusRTU通讯类
     /// </summary>
-    internal class ModbusComm : IDisposable
+    internal class ModbusComm : IDisposable,IPlccommiunctionCommand
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private int _baudRate;
@@ -81,6 +81,8 @@ namespace 小玩意.Comm
             }
             return null;
         }
+
+        #region 暂存不再使用
 
         /// <summary>
         /// 写入单个线圈
@@ -165,6 +167,8 @@ namespace 小玩意.Comm
             return null;
         }
 
+        #endregion
+
         /// <summary>
         /// 批量写入寄存器
         /// </summary>
@@ -214,7 +218,7 @@ namespace 小玩意.Comm
             bytes = ReadOutCoil(slaveAddress, startAddress, numberOfRegisters);
             bytes = ReadPutCoil(slaveAddress, startAddress, numberOfRegisters);
         }
-
+# region 暂存不再使用
         /// <summary>
         /// 读输入寄存器
         /// </summary>
@@ -332,7 +336,7 @@ namespace 小玩意.Comm
             return bytes;
         }
 
-
+        #endregion 
         /// <summary>
         /// 向串口写入字符串数据
         /// </summary>
@@ -405,6 +409,26 @@ namespace 小玩意.Comm
         {
             this.SerialPort?.Dispose();
             ErrorViewModel.Errornotice("串口已关闭", false, 6);
+        }
+
+        public bool WritePlcInt32(string DBaddress, string value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool WritePlcInt16(string DBaddress, string value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool WritePlcByte(string DBaddress, string value)
+        {
+            throw new NotImplementedException();
+        }
+
+        public T ReadPlc<T>(T type, string address)
+        {
+            throw new NotImplementedException();
         }
     }
 }

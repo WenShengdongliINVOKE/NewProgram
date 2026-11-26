@@ -1,5 +1,6 @@
 ﻿using HslCommunication;
 using HslCommunication.Profinet.Melsec;
+using HslCommunication.Profinet.Panasonic;
 using NLog;
 using 小玩意.ViewModel;
 
@@ -23,7 +24,7 @@ namespace 小玩意.Comm
 
         private int _port;
         // 实例化对象，指定PLC的ip地址和端口号
-        MelsecMcNet melsecMc;
+        PanasonicMcNet melsecMc;
         OperateResult conn;
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
 
@@ -31,7 +32,7 @@ namespace 小玩意.Comm
         {
             _address = address;
             _port = port;
-            melsecMc = new MelsecMcNet(_address, _port);
+            melsecMc = new PanasonicMcNet (_address, _port);
         }
         public bool Connect()
         {

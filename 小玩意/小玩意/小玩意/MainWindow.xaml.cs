@@ -124,13 +124,23 @@ namespace 小玩意
 
             //MainFrame.BeginAnimation(OpacityProperty, fadeOut);
         }
+        /// <summary>
+        /// 高亮当前选中的导航按钮。
+        /// 作用：把其余按钮的文字恢复成黑色，再把当前按钮染成主题蓝。
+        /// 目的：导航栏有多个入口，如果不复位，会同时有好几个按钮保持蓝色，
+        ///      操作员就看不出当前停在哪一页了。
+        /// 注意：这里逐个重置而不是遍历，是因为按钮不在同一个容器里，
+        ///      遍历要额外做可视化树查找，反而更容易出错。
+        /// </summary>
         private void HighlightNavButton(Button activeButton)
         {
             // 重置所有按钮样式
             ConnectDevice.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
-            S7Communication.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
-            AboutBtn.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
+            AxisNav.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
+            VisionNav.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
             ContactBtn.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
+            ccc.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
+            Weather.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF000000"));
 
             // 高亮当前按钮
             if (activeButton != null)

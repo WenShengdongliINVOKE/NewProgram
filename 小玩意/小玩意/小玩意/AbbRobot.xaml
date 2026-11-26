@@ -1,171 +1,221 @@
 ﻿<Page x:Class="小玩意.AbbRobot"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:小玩意"
-      mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920"
+      mc:Ignorable="d"
+      d:DesignHeight="900" d:DesignWidth="1400"
+      Background="#FFF5F5F5"
       Title="AbbRobot">
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
 
+            <!-- 卡片容器：与 PLC 信息页保持同一套视觉 -->
+            <Style x:Key="CardStyle" TargetType="Border">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Padding" Value="18"/>
+            </Style>
+
+            <Style x:Key="CardTitleStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="Foreground" Value="#FF374151"/>
+            </Style>
+
+            <Style x:Key="ColumnHeaderStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="11"/>
+                <Setter Property="Foreground" Value="#FF9CA3AF"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+
+            <Style x:Key="CellStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="Foreground" Value="#FF111827"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+            </Style>
+
+            <!--
+                机器人列表项。
+                作用：自绘选中/悬停效果。
+                目的：系统默认的蓝底白字与主界面暖色风格冲突，
+                      且默认模板行高不固定，会与表头错位。
+            -->
+            <Style x:Key="RobotItemStyle" TargetType="ListBoxItem">
+                <Setter Property="Margin" Value="0,0,0,4"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ListBoxItem">
+                            <Border x:Name="Bd"
+                                    Background="#FFF9FAFB"
+                                    BorderBrush="#FFE5E7EB"
+                                    BorderThickness="1"
+                                    CornerRadius="6"
+                                    Padding="12,10">
+                                <ContentPresenter/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Bd" Property="Background" Value="#FFFDF3EC"/>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter TargetName="Bd" Property="Background" Value="#FFFDF3EC"/>
+                                    <Setter TargetName="Bd" Property="BorderBrush" Value="#FFF57A7A"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Page.Resources>
 
-    <Grid  >
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions  >
-            <RowDefinition Height="0.04*" />
-            <RowDefinition Height="*" />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel>
-            <TextBlock Text="机器人参数" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,5,0,5"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1">
-            <TextBlock  Text="机器人数量" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,5,0,5" />
-        </StackPanel>
-        <Grid Grid.Column="1" Grid.Row="1">
-            
-            <DataGrid   AutoGenerateColumns="False" BorderBrush="{x:Null}" Foreground="Black" 
-                        HeadersVisibility="Column" HorizontalScrollBarVisibility="Hidden"
-                        VerticalScrollBarVisibility="Auto" GridLinesVisibility="None"
-                        SelectedItem="{Binding SelectedSide, Mode=TwoWay}"
-                        Background="White"  FontSize="10" 
-                        CanUserAddRows="False" Style="{Binding DataGridColumnHeader}" ItemsSource="{Binding RobotModels}"  >
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="机器人ID" Width="0.8*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Height="90" >
-                                    <Label Content="{Binding Id }"  FontFamily="Agency FB" FontSize="20"  Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="机器人名称" Width="1*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding Name }"  FontFamily="Agency FB" FontSize="20" Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="系统版本" Width="1*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding SystemVersion }"  FontFamily="Agency FB"  FontSize="20" Margin="20,10,0,10"></Label>
-                                    <!--<Button Content="连接" FontSize="20" Width="130" Height="30" Tag="{Binding ID}" Command="{Binding  }" Margin="0,2,0,0">
-                                    </Button>-->
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="IP地址" Width="1.5*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding IPAddress }"   FontFamily="Agency FB"  FontSize="20" Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="是否为虚拟机"   Width="*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding IsVirtual }"   FontFamily="Agency FB" FontSize="20" Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
+        <!-- ============ 顶部工具栏 ============ -->
+        <Border Grid.Row="0" Background="#FFF5F5F5" Padding="24,16,24,12"
+                BorderBrush="#FFE5E7EB" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-            </DataGrid>
-            
-        </Grid>
-        <Grid Grid.Column="0" Grid.Row="1">
-            <DataGrid   AutoGenerateColumns="False" BorderBrush="{x:Null}" Foreground="Black" 
-             HeadersVisibility="Column" HorizontalScrollBarVisibility="Hidden"
-             VerticalScrollBarVisibility="Auto" GridLinesVisibility="None"
-             SelectedItem="{Binding SelectedSide, Mode=TwoWay}"
-             Background="White"  FontSize="10" 
-             CanUserAddRows="False" Style="{Binding DataGridColumnHeader}" ItemsSource="{Binding RobotModels}"  >
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="数据名称" Width="0.8*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Height="90" >
-                                    <Label Content="{Binding AddressValue }" Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="模块名称" Width="1*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding Port }" Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="机器人名称" Width="1*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding Port }" Margin="20,10,0,10"></Label>
-                                    <!--<Button Content="连接" FontSize="20" Width="130" Height="30" Tag="{Binding ID}" Command="{Binding  }" Margin="0,2,0,0">
-                         </Button>-->
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="目标数据类型" Width="1*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding Port }" Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="当前值" Width="*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding Port }" Margin="20,10,0,10"></Label>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="操作" Width="*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <Button x:Name="ss" Content="写入" Command="{Binding AbbSetValue}"  FontSize="20"  Width="130" Height="30" Style="{StaticResource ModernButtonStyle1}" CommandParameter="ABB">
-                                        
-                                    </Button>
-                                    <!--<Label Content="{Binding Port }" Margin="20,10,0,10"></Label>-->
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="机器人信息" FontSize="21" FontWeight="SemiBold" Foreground="#FF111827"/>
+                    <TextBlock Text="ABB 控制器 · RobotStudio SDK"
+                               FontSize="12" Foreground="#FF6B7280" Margin="0,4,0,0"/>
+                </StackPanel>
 
-            </DataGrid>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Background="White" CornerRadius="12" Padding="12,5"
+                            BorderBrush="#FFE5E7EB" BorderThickness="1" Margin="0,0,10,0">
+                        <TextBlock Text="{Binding RobotModels.Count, StringFormat={}{0} 台机器人}"
+                                   FontSize="12" Foreground="#FF374151"/>
+                    </Border>
+                    <Border Background="White" CornerRadius="12" Padding="12,5"
+                            BorderBrush="#FFE5E7EB" BorderThickness="1">
+                        <TextBlock Text="{Binding AbbRobotValueModels.Count, StringFormat={}{0} 个点位}"
+                                   FontSize="12" Foreground="#FF374151"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- ============ 主体 ============ -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 机器人列表 -->
+            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top" Margin="0,0,0,14">
+                        <TextBlock Text="已扫描到的机器人" Style="{StaticResource CardTitleStyle}"/>
+                        <TextBlock Text="启动时自动扫描同一网段内的控制器"
+                                   FontSize="11" Foreground="#FF9CA3AF" Margin="0,4,0,0"/>
+                    </StackPanel>
+
+                    <Grid DockPanel.Dock="Top" Margin="12,0,12,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1.4*"/>
+                            <ColumnDefinition Width="1.4*"/>
+                            <ColumnDefinition Width="0.8*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="名称" Style="{StaticResource ColumnHeaderStyle}"/>
+                        <TextBlock Grid.Column="1" Text="系统版本" Style="{StaticResource ColumnHeaderStyle}"/>
+                        <TextBlock Grid.Column="2" Text="IP 地址" Style="{StaticResource ColumnHeaderStyle}"/>
+                        <TextBlock Grid.Column="3" Text="虚拟" Style="{StaticResource ColumnHeaderStyle}"/>
+                    </Grid>
+
+                    <ListBox ItemsSource="{Binding RobotModels}"
+                             SelectedItem="{Binding SelectedSide, Mode=TwoWay}"
+                             ItemContainerStyle="{StaticResource RobotItemStyle}"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1.4*"/>
+                                        <ColumnDefinition Width="1.4*"/>
+                                        <ColumnDefinition Width="0.8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding Name}" Style="{StaticResource CellStyle}"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding SystemVersion}" Style="{StaticResource CellStyle}"/>
+                                    <TextBlock Grid.Column="2" Text="{Binding IPAddress}" Style="{StaticResource CellStyle}"/>
+                                    <TextBlock Grid.Column="3" Text="{Binding IsVirtual}" Style="{StaticResource CellStyle}"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </Border>
+
+            <!-- 机器人点位 -->
+            <Border Grid.Column="1" Style="{StaticResource CardStyle}" Margin="16,0,0,0">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top" Margin="0,0,0,14">
+                        <TextBlock Text="机器人点位" Style="{StaticResource CardTitleStyle}"/>
+                        <TextBlock Text="RAPID 变量与信号的当前值"
+                                   FontSize="11" Foreground="#FF9CA3AF" Margin="0,4,0,0"/>
+                    </StackPanel>
+
+                    <Grid DockPanel.Dock="Top" Margin="12,0,12,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="数据名称" Style="{StaticResource ColumnHeaderStyle}"/>
+                        <TextBlock Grid.Column="1" Text="地址" Style="{StaticResource ColumnHeaderStyle}"/>
+                        <TextBlock Grid.Column="2" Text="当前值" Style="{StaticResource ColumnHeaderStyle}"/>
+                    </Grid>
+
+                    <ItemsControl ItemsSource="{Binding AbbRobotValueModels}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="#FFF3F4F6" BorderThickness="0,0,0,1" Padding="12,11">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="1.5*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding Name}" Style="{StaticResource CellStyle}"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Address}" Style="{StaticResource CellStyle}"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding Value}"
+                                                   Style="{StaticResource CellStyle}"
+                                                   Foreground="#FF1E88E5" FontWeight="SemiBold"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </DockPanel>
+            </Border>
         </Grid>
+
+        <!-- ============ 状态栏 ============ -->
+        <Border Grid.Row="2" Background="White" Padding="24,10"
+                BorderBrush="#FFE5E7EB" BorderThickness="0,1,0,0">
+            <TextBlock Text="提示：打开本页时会扫描并连接网段内的 ABB 控制器，扫描期间机器人数可能为空。"
+                       FontSize="12" Foreground="#FF9CA3AF"/>
+        </Border>
     </Grid>
-
-    
 </Page>

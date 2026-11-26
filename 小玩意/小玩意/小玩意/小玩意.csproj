@@ -15,11 +15,16 @@
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+    <PackageReference Include="EasyModbusTCP" Version="5.6.0" />
     <PackageReference Include="EPPlus" Version="7.7.0" />
     <PackageReference Include="HslCommunication" Version="12.5.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="NLog" Version="6.0.4" />
     <PackageReference Include="NPOI" Version="2.7.4" />
+    <PackageReference Include="OpenCvSharp4" Version="4.11.0.20250507" />
+    <PackageReference Include="OpenCvSharp4.Extensions" Version="4.11.0.20250507" />
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.11.0.20250507" />
+    <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.11.0.20250507" />
     <PackageReference Include="S7netplus" Version="0.20.0" />
     <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
@@ -28,15 +33,56 @@
     <Folder Include="DLL\" />
   </ItemGroup>
 
+  <!--
+    配置文件目录。
+    作用：把源码 ini 目录下的配置表同步到输出目录的 ini 下。
+    目的：ReadIniFile 已改成相对路径定位（小玩意\ini 或 exe 同级的 ini），
+          构建后 bin 里必须有对应的 ini，否则程序一启动就报「文件不存在」。
+          用 Remove + Include 而不是 Update：Update 对未显式声明的项不生效。
+          不加 Link，保留 ini 子目录结构，正好对上 ReadIniFile 的第二条兜底路径。
+  -->
+  <ItemGroup>
+    <None Remove="ini\*.xlsx" />
+    <None Include="ini\*.xlsx" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!--
+    正运动控制器的原生驱动库。
+    作用：把 Zmotion 目录下的 dll 复制到输出目录。
+    目的：轴控制页通过 DllImport 调用 zauxdll.dll，该 dll 必须和 exe 在同一目录；
+          不复制的话运行时会抛 DllNotFoundException，且表现和"网络连不上"几乎一样，很难排查。
+          这里用 Update 而不是 Include，是因为 SDK 风格的项目已把所有文件隐式包含为 None 项，
+          再 Include 会造成重复项导致生成报错。
+  -->
+  <ItemGroup>
+    <None Remove="Zmotion\zauxdll.dll" />
+    <None Remove="Zmotion\zmotion.dll" />
+    <!--
+      Link 用来把文件平铺到输出目录根下。
+      作用：让 dll 落到 exe 同级，而不是保留 Zmotion 子目录结构。
+      目的：DllImport("zauxdll.dll") 只在 exe 所在目录（及系统 PATH）里找，
+          保留子目录的话运行时仍然会抛 DllNotFoundException。
+    -->
+    <None Include="Zmotion\zauxdll.dll" Link="zauxdll.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Zmotion\zmotion.dll" Link="zmotion.dll" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!--
+    ABB 机器人的 RobotStudio SDK 依赖。
+    作用：从仓库内的 lib 目录引用，不再指向 bin 输出目录。
+    目的：原 HintPath 指向 bin\Debug\net8.0-windows，而 bin 已被 .gitignore 排除，
+          别人 clone 下来会直接编译失败（找不到引用）；
+          放到 lib 后依赖随仓库走，且不会被构建产物覆盖。
+  -->
   <ItemGroup>
     <Reference Include="ABB.Robotics.Controllers.PC">
-      <HintPath>bin\Debug\net8.0-windows\ABB.Robotics.Controllers.PC.dll</HintPath>
+      <HintPath>lib\ABB.Robotics.Controllers.PC.dll</HintPath>
     </Reference>
     <Reference Include="RobotStudio.Services.RobApi">
-      <HintPath>bin\Debug\net8.0-windows\RobotStudio.Services.RobApi.dll</HintPath>
+      <HintPath>lib\RobotStudio.Services.RobApi.dll</HintPath>
     </Reference>
     <Reference Include="RobotStudio.Services.RobApi.Desktop">
-      <HintPath>bin\Debug\net8.0-windows\RobotStudio.Services.RobApi.Desktop.dll</HintPath>
+      <HintPath>lib\RobotStudio.Services.RobApi.Desktop.dll</HintPath>
     </Reference>
   </ItemGroup>
 

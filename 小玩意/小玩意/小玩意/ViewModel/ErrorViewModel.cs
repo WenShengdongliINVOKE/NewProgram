@@ -26,12 +26,12 @@ namespace 小玩意.ViewModel
         {
 
         }
-        /// <summary>
-        /// 报错提示框
-        /// </summary>
-        /// <param name="str">提示内容</param>
-        /// <param name="b">报警还是正常内容</param>
-        /// <param name="number">选择不同的动画 1一般错误 2预料之中的错误 3严重错误</param>
+       /// <summary>
+       /// 报错提示框
+       /// </summary>
+       /// <param name="str">提示内容</param>
+       /// <param name="b">一般错误或严重错误</param>
+       /// <param name="number">错误等级图像</param>
         public static void Errornotice(string str, bool b, int number)
         {
             if (!b)

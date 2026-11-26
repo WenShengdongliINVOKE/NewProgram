@@ -1,0 +1,221 @@
+<Page x:Class="小玩意.VisionRecognition"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:小玩意"
+      mc:Ignorable="d"
+      d:DesignHeight="900" d:DesignWidth="1400"
+      Background="#FFF5F6F8"
+      Title="VisionRecognition">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- 浅色工具按钮：与轴控制页保持一致 -->
+            <Style x:Key="ToolButtonStyle" TargetType="Button">
+                <Setter Property="Height" Value="36"/>
+                <Setter Property="MinWidth" Value="96"/>
+                <Setter Property="Padding" Value="14,0"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="Foreground" Value="#FF374151"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="Bd"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="#FFD1D5DB"
+                                    BorderThickness="1"
+                                    CornerRadius="6">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="Bd" Property="Background" Value="#FFEFF6FF"/>
+                                    <Setter TargetName="Bd" Property="BorderBrush" Value="#FF93C5FD"/>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="Bd" Property="Background" Value="#FFF3F4F6"/>
+                                    <Setter TargetName="Bd" Property="BorderBrush" Value="#FFE5E7EB"/>
+                                    <Setter Property="Foreground" Value="#FF9CA3AF"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="CardStyle" TargetType="Border">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Padding" Value="16"/>
+            </Style>
+
+            <!--
+                图像框。
+                作用：给每路图像一个深色底。
+                目的：检测结果图多为浅色/黑白，放在白底卡片里边界看不清；
+                      深色底能把图像范围框出来，也便于发现"没出图"和"图是全黑"的区别。
+            -->
+            <Style x:Key="ImageViewportStyle" TargetType="Border">
+                <Setter Property="Background" Value="#FF111827"/>
+                <Setter Property="CornerRadius" Value="6"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+                <Setter Property="MinHeight" Value="120"/>
+            </Style>
+
+            <Style x:Key="ImageTitleStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="Foreground" Value="#FF6B7280"/>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- ============ 顶部工具栏 ============ -->
+        <Border Grid.Row="0" Background="White" Padding="24,14"
+                BorderBrush="#FFE5E7EB" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="视觉识别" FontSize="21" FontWeight="SemiBold" Foreground="#FF111827"/>
+                    <TextBlock Text="OpenCV · 灰度 / 二值化 / 连通域点位检测"
+                               FontSize="12" Foreground="#FF6B7280" Margin="0,3,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Content="启动相机" Command="{Binding StartCameraCommand}"
+                            Style="{StaticResource ModernButtonStyle1}"
+                            Width="100" Height="36" FontSize="13" Margin="0,0,8,0"/>
+                    <Button Content="停止相机" Command="{Binding StopCameraCommand}"
+                            Style="{StaticResource ToolButtonStyle}" Margin="0,0,8,0"/>
+                    <Button Content="加载图片" Command="{Binding LoadImageCommand}"
+                            Style="{StaticResource ToolButtonStyle}" Margin="0,0,14,0"/>
+
+                    <Border CornerRadius="12" Padding="12,5" Background="#FFF3F4F6">
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Width="8" Height="8" Margin="0,0,6,0" VerticalAlignment="Center">
+                                <Ellipse.Style>
+                                    <Style TargetType="Ellipse">
+                                        <Setter Property="Fill" Value="#FF9CA3AF"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsCameraRunning}" Value="True">
+                                                <Setter Property="Fill" Value="#FF16A34A"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Ellipse.Style>
+                            </Ellipse>
+                            <TextBlock Text="{Binding CameraStateText}" FontSize="12" Foreground="#FF374151"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- ============ 主体 ============ -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="260"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 四路图像：原图 / 灰度 / 二值 / 检测结果 -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource CardStyle}" Margin="0,0,8,8">
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="Top" Text="原始图像" Style="{StaticResource ImageTitleStyle}"/>
+                        <Border Style="{StaticResource ImageViewportStyle}">
+                            <Image Source="{Binding OriginalImage}" Stretch="Uniform" Margin="6"/>
+                        </Border>
+                    </DockPanel>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource CardStyle}" Margin="8,0,0,8">
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="Top" Text="灰度图" Style="{StaticResource ImageTitleStyle}"/>
+                        <Border Style="{StaticResource ImageViewportStyle}">
+                            <Image Source="{Binding GrayImage}" Stretch="Uniform" Margin="6"/>
+                        </Border>
+                    </DockPanel>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource CardStyle}" Margin="0,8,8,0">
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="Top" Text="二值化" Style="{StaticResource ImageTitleStyle}"/>
+                        <Border Style="{StaticResource ImageViewportStyle}">
+                            <Image Source="{Binding BinaryImage}" Stretch="Uniform" Margin="6"/>
+                        </Border>
+                    </DockPanel>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource CardStyle}" Margin="8,8,0,0">
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="Top" Text="检测结果" Style="{StaticResource ImageTitleStyle}"/>
+                        <Border Style="{StaticResource ImageViewportStyle}">
+                            <Image Source="{Binding ProcessedImage}" Stretch="Uniform" Margin="6"/>
+                        </Border>
+                    </DockPanel>
+                </Border>
+            </Grid>
+
+            <!-- 统计 -->
+            <Border Grid.Column="1" Style="{StaticResource CardStyle}" Margin="16,0,0,0">
+                <StackPanel>
+                    <TextBlock Text="识别统计" FontSize="14" FontWeight="SemiBold" Foreground="#FF374151"/>
+                    <TextBlock Text="当前画面中的点位数（面积 50~10000 的连通域）"
+                               FontSize="11" Foreground="#FF9CA3AF"
+                               TextWrapping="Wrap" Margin="0,8,0,0"/>
+
+                    <TextBlock Text="{Binding DetectedCount}"
+                               FontSize="54" FontWeight="Bold"
+                               Foreground="#FF1E88E5" Margin="0,18,0,0"/>
+                    <TextBlock Text="{Binding DetectedCountText}"
+                               FontSize="12" Foreground="#FF6B7280"/>
+
+                    <Border Height="1" Background="#FFE5E7EB" Margin="0,20"/>
+
+                    <TextBlock Text="说明" FontSize="12" FontWeight="SemiBold" Foreground="#FF6B7280"/>
+                    <TextBlock Text="检测流程：灰度化 → 反向二值化（阈值 50）→ 开运算去噪 → 连通域分析。面积落在 50~10000 之间的区域视为一个点位。"
+                               FontSize="11" Foreground="#FF9CA3AF"
+                               TextWrapping="Wrap" LineHeight="18" Margin="0,8,0,0"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- ============ 状态栏 ============ -->
+        <Border Grid.Row="2" Background="White" Padding="24,10"
+                BorderBrush="#FFE5E7EB" BorderThickness="0,1,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="状态" FontSize="11" Foreground="#FF9CA3AF"
+                           VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBlock Text="{Binding StatusText}" FontSize="13" Foreground="#FF111827"
+                           VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

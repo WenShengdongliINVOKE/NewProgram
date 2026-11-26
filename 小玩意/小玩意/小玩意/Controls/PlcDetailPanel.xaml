@@ -1,0 +1,182 @@
+<UserControl x:Class="小玩意.Controls.PlcDetailPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="480" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <!-- 卡片容器 -->
+        <Style x:Key="DetailCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="16"/>
+            <Setter Property="Margin" Value="0,0,0,16"/>
+        </Style>
+
+        <Style x:Key="DetailCardTitleStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#FF374151"/>
+        </Style>
+
+        <Style x:Key="DetailColumnHeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="#FF9CA3AF"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="DetailCellStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#FF111827"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+        </Style>
+
+        <!-- 设备项：与主界面一致的浅暖色选中态 -->
+        <Style x:Key="DetailDeviceItemStyle" TargetType="ListBoxItem">
+            <Setter Property="Margin" Value="0,0,0,4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border x:Name="Bd"
+                                Background="#FFF9FAFB"
+                                BorderBrush="#FFE5E7EB"
+                                BorderThickness="1"
+                                CornerRadius="6"
+                                Padding="10,8">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#FFFDF3EC"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#FFFDF3EC"/>
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="#FFF57A7A"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <!--
+        注意：本控件刻意不在构造函数里设置 DataContext。
+        作用：让宿主页面通过 DataContext 绑定把视图模型传进来。
+        目的：如果这里自己 new 一个视图模型，就会绕开外部的选中/连接状态，
+              出现"上面显示已连接、下面点位却读不到"的错位。
+    -->
+    <Grid Height="480">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- ============ 当前可连接的设备 ============ -->
+        <Border Grid.Row="0" Style="{StaticResource DetailCardStyle}">
+            <StackPanel>
+                <Grid Margin="0,0,0,10">
+                    <TextBlock Text="当前可连接的设备" Style="{StaticResource DetailCardTitleStyle}"/>
+                    <TextBlock Text="{Binding MyDevice.Count, StringFormat={}{0} 台}"
+                               FontSize="11" Foreground="#FF9CA3AF"
+                               HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </Grid>
+
+                <Grid Margin="10,0,10,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="地址" Style="{StaticResource DetailColumnHeaderStyle}"/>
+                    <TextBlock Grid.Column="1" Text="机架" Style="{StaticResource DetailColumnHeaderStyle}"/>
+                    <TextBlock Grid.Column="2" Text="槽号" Style="{StaticResource DetailColumnHeaderStyle}"/>
+                </Grid>
+
+                <!--
+                    设备列表。
+                    作用：列出当前可通讯的设备，选中哪一台，下方点位就切到哪一台。
+                    目的：默认选中第一台（见 S7CommViweModel.GetPlcDevice），
+                          否则打开面板先是一片空白，操作员还得手动点一下才知道有没有数据。
+                    限制高度：设备通常只有几台，给个上限可以避免它把下方点位区挤没。
+                -->
+                <ListBox ItemsSource="{Binding MyDevice}"
+                         SelectedItem="{Binding SelectedSide, Mode=TwoWay}"
+                         ItemContainerStyle="{StaticResource DetailDeviceItemStyle}"
+                         MaxHeight="150"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding S7Address}" Style="{StaticResource DetailCellStyle}"/>
+                                <TextBlock Grid.Column="1" Text="{Binding S7Rack}" Style="{StaticResource DetailCellStyle}"/>
+                                <TextBlock Grid.Column="2" Text="{Binding S7Slot}" Style="{StaticResource DetailCellStyle}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </Border>
+
+        <!-- ============ 点位数据 ============ -->
+        <Border Grid.Row="1" Style="{StaticResource DetailCardStyle}" Margin="0,0,0,0">
+            <DockPanel>
+                <Grid DockPanel.Dock="Top" Margin="0,0,0,10">
+                    <TextBlock Text="点位数据" Style="{StaticResource DetailCardTitleStyle}"/>
+                    <TextBlock Text="{Binding MyDataValue.Count, StringFormat={}{0} 个点位}"
+                               FontSize="11" Foreground="#FF9CA3AF"
+                               HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                </Grid>
+
+                <Grid DockPanel.Dock="Top" Margin="10,0,10,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="变量名称" Style="{StaticResource DetailColumnHeaderStyle}"/>
+                    <TextBlock Grid.Column="1" Text="地址" Style="{StaticResource DetailColumnHeaderStyle}"/>
+                    <TextBlock Grid.Column="2" Text="当前值" Style="{StaticResource DetailColumnHeaderStyle}"/>
+                </Grid>
+
+                <ItemsControl ItemsSource="{Binding MyDataValue}">
+                    <ItemsControl.Template>
+                        <ControlTemplate TargetType="ItemsControl">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                          HorizontalScrollBarVisibility="Disabled">
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </ControlTemplate>
+                    </ItemsControl.Template>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#FFF3F4F6" BorderThickness="0,0,0,1" Padding="10,8">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1.5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding Name}" Style="{StaticResource DetailCellStyle}"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Address}" Style="{StaticResource DetailCellStyle}"/>
+                                    <TextBlock Grid.Column="2" Text="{Binding Value}"
+                                               Style="{StaticResource DetailCellStyle}"
+                                               Foreground="#FFB45309" FontWeight="SemiBold"/>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </DockPanel>
+        </Border>
+    </Grid>
+</UserControl>

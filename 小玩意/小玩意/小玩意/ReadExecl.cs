@@ -26,10 +26,24 @@ namespace 小玩意
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             var rowData = new ReadIniModel();
 
-            var filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            // 配置文件改为相对路径定位，不再拼 exe 的绝对目录。
+            // 作用：把配置固定到项目里的「小玩意\ini\配置文件.xlsx」。
+            // 目的：原来用 Assembly.Location 拼绝对路径，配置只能跟着 exe 走，
+            //      换台机器或改部署目录就得重新放一遍文件；改成相对路径后，
+            //      开发目录和输出目录用同一套结构，源码里的 ini 由 csproj 在构建时同步过去。
+            string filePath = Path.Combine("小玩意", "ini", "配置文件.xlsx");
+
+            // 作用：相对当前工作目录找不到时，回退到 exe 同级的 ini。
+            // 目的：从 bin 目录直接双击启动时，工作目录就是 exe 所在目录，
+            //      此时「小玩意\ini」并不存在；不兜底的话程序会直接报"文件不存在"，
+            //      而这个报错和"配置真的丢了"看起来一模一样，很难判断是哪一种。
+            if (!File.Exists(filePath))
+            {
+                filePath = Path.Combine(AppContext.BaseDirectory, "ini", "配置文件.xlsx");
+            }
+
             try
             {
-                filePath += "\\ini\\配置文件.xlsx";
                 FileInfo fileInfo = new FileInfo(filePath);
 
 

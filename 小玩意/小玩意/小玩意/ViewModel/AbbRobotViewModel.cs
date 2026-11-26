@@ -54,6 +54,13 @@ namespace 小玩意.ViewModel
         {
 
             RobotModels = new ObservableCollection<AbbRobotModel>();
+
+            // 作用：点位集合必须先实例化。
+            // 目的：界面点位列表绑的就是它，为 null 时列表永远空；
+            //      读取循环里对它做 foreach 会抛空引用，而那个 catch 又会弹窗，
+            //      一旦配置里能有数据，就会变成"无限循环 + 无限弹窗"，页面根本没法用。
+            AbbRobotValueModels = new ObservableCollection<AbbRobotValueModel>();
+
             Task.Factory.StartNew(() =>
             {
                 abbRobotCommunication = new AbbRobotCommunication();
@@ -132,9 +139,16 @@ namespace 小玩意.ViewModel
                     }
                     catch (Exception ex)
                     {
-
-                        ErrorViewModel.Errornotice(ex.Message, true, 1);
+                        // 作用：只记日志，不弹窗。
+                        // 目的：这是常驻循环，机器人短暂掉线时每一轮都会失败一次，
+                        //      弹窗会在一分钟内堆满屏幕，把真正的错误信息盖住。
+                        logger.Error(ex, "读取机器人数据出错");
                     }
+
+                    // 作用：每轮读取之间停一下。
+                    // 目的：原循环没有任何等待，等于同步死循环，会把一个 CPU 核跑满；
+                    //      高频读取还会占满控制器连接，其他操作拿不到响应。
+                    await Task.Delay(500);
                 }
 
 

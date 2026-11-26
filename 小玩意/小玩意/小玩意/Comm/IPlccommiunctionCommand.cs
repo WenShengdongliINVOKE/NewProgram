@@ -2,6 +2,7 @@
 {
     public interface IPlccommiunctionCommand
     {
+        
         public bool WritePlcInt32(string DBaddress, string value);
         public bool WritePlcInt16(string DBaddress, string value);
 
